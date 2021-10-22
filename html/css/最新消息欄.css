@@ -1,0 +1,48 @@
+/* 最新消息欄 */
+
+div.cat_index main div.information{
+    border: 1px solid red;
+    width: 970px;
+    margin: 40px auto 20px;
+}
+
+div.cat_index main div.information div.information_head{
+     border: 1px solid red;    
+     color: #216278;
+     font-weight: bolder;
+     font-size: 20px;
+     
+}
+
+div.cat_index main div.information div.information_side{
+     border: 1px solid blue;
+
+
+}
+ 
+div.cat_index main div.information div.information_inner{
+     border: 1px solid red;
+     display: flex;
+}
+
+div.cat_index main div.information div.information_item{
+     width: 300px;
+     margin-right: 70px;
+
+}
+
+div.cat_index main div.information div.information_item span{
+     font-size: 13px;
+}
+
+div.cat_index main div.information div.information_item p{
+     margin : 13px 0 0 0 ;
+     font-size: 14px;
+     font-weight: bold;
+}
+
+div.cat_index main div.information div.information_item p:nth-child(3){
+    font-size: 13px;
+    color: #b1b1b1;
+    font-weight: normal;
+}
