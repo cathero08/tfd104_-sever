@@ -1,0 +1,306 @@
+/* 首圖 */
+
+.food_cathead{
+    width: 100%;
+    height: 75vh;
+    background-image: url("../images/background/food_cat_head.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  bottom;
+}
+
+
+h1.food_boss{
+    /* width: 1000px; */
+    margin: 70px auto 140px;
+    text-align: center;
+    color: #216278;
+    letter-spacing: 5px;
+    line-height: 40px;
+    font-size: 34px;
+    font-weight: bolder
+    ;
+}
+
+
+
+/* 內文 */
+
+
+.food_bread_outside{
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 400px auto 15px;
+}
+
+
+.food_bread_inside{
+    display: flex;
+}
+
+
+.food_bread{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px 20px 100px;
+    flex-basis:400px ;
+    
+}
+
+.food_bread h2{
+    text-align:center ;
+    font-size: 34px;
+    letter-spacing: 1px;
+}
+
+.food_bread p{
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c4c4c4;
+}
+
+.food_bread_right{
+    width: 550px;
+    height: 565px;
+    position: relative;
+    
+}
+
+
+.food_bread_right img{
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    
+
+}
+
+
+.food_bread_right::before{
+    width: 100%;
+    height: 110%;
+    background-color: rgba(250, 161, 157, 0.4);
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: -210px;
+    left: 123px;
+}
+
+
+/* 可頌 */
+
+.bread_ouu{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 40px;
+
+}
+
+
+.bread_inn{
+    display: flex;
+    justify-content: center;
+    /* max-width: 1044px; */
+    width: 75%;
+    margin: 0 auto;
+    background-color: #FAA19D;
+}
+
+.breed_title_img{
+    /* min-width: 330px; */
+    height: 300px;
+    flex-basis: 330px;
+    margin-left: 110px;
+    flex-shrink: 0;
+    padding: 15px 0;
+}
+
+.breed_title_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.breed_text {
+    padding:  0 60px;
+}
+
+.breed_text h2{
+    color: white;
+    margin-top: 40px;
+
+}
+
+.breed_text p{
+    color: white;
+    font-size: 15px;
+    margin-top: 70px;
+    max-width: 484px;
+}
+
+
+
+h2.food_simple{
+    text-align:center ;
+    font-size: 34px;
+    letter-spacing: 0px;
+}
+
+
+p.food_sit{
+    text-align: center;
+    letter-spacing: 1.2px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c4c4c4;
+}
+
+
+/* 咖啡區 */
+
+
+.coffee_side{
+    display: flex;
+    justify-content: center;
+    /* max-width: 1200px; */
+    width: 85%;
+    /* background-color: #BCBCBC; */
+    background-image: url("../images/background/灰底BG.jpg");
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+
+
+.db-coffee{
+    display: inline-block;
+    
+    
+}
+
+
+.bg-coffee0{
+    margin: 50px;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+.bg-coffee0 p{
+    background-color: #E5E5E5;
+    padding: 8px 25px 8px 55px;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.bg-coffee0 p:hover{
+    cursor: pointer;
+    background-color: #b4b4b4;
+    color: white;
+}
+
+
+
+
+.bg-coffee{
+    background-image: url("../images/coffee/AdobeStock_267568050.jpg");
+    background-color: seashell;
+    width: 340px;
+    height: 330px;
+    content: "123";
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 110px 0 60px 0;
+    display: inline-block;
+    top: -10px;
+    position: relative;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.bg-coffee::before{
+    background-color: #216278;
+    width: 340px;
+    height: 330px;
+    z-index: -1 ;
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 45px;
+}
+
+
+
+
+/* 跑馬咖啡 */
+
+.run_cafe_side{
+    /* background: #c4c4c4; */
+    background-image: url("../images/background/灰底BG.jpg");
+    /* max-width: 1250px; */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto  100px ;
+    
+    /* overflow: hidden; */
+    position: relative;
+    
+}
+
+.run_cafe_side::before{
+    content: "Latte art";
+    font-size: 30px;
+    width: 200px;
+    position: absolute;
+    bottom: -17px;
+    left: 100px;
+}
+
+.run_cafe_side::after{
+    content: "";
+    background-image: url("../images/background/runcafe.png");
+    width: 310px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: -60px;
+    bottom: -67px;
+    position: absolute;
+}
+
+.run_cafe{
+    display: flex;
+    margin: 30px 20px;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+
+.run_cafe_innin{
+    display: flex;
+    width: 240px;
+    height: 230px;
+    padding: 0px;
+    flex-shrink: 0;
+
+    /* animation: runcafe;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; */
+}
+
+.run_cafe_innin img{
+    object-fit: cover;
+    width: 100%;
+}
+
+
+

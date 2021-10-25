@@ -1,0 +1,174 @@
+/* 首圖 */
+
+.gift_cathead{
+    width: 100%;
+    height: 75vh;
+    background-image: url("../images/background/gift_cat_head.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  bottom;
+}
+
+
+h1.gift_boss{
+    /* width: 1000px; */
+    margin: 70px auto 140px;
+    text-align: center;
+    color: #216278;
+    letter-spacing: 5px;
+    line-height: 40px;
+    font-size: 34px;
+    font-weight: bolder
+    ;
+}
+
+
+
+/* 內文 */
+
+
+
+.headgrid{
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 120px;
+    gap: 30px;
+    min-width: 600px;
+    justify-content: center;
+    margin: 0 20%;
+}
+
+
+
+.head3 img{
+    width: 100%;
+    height: 100%;
+}
+
+.head3:nth-child(2) img{
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+.gift_grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    margin: 60px 20%;
+    justify-content: center;
+    min-width: 600px;
+}
+
+.gift_frid_items{
+    padding: 10px ;
+    /* text-align: center; */
+
+}
+
+.gift_frid_items ul{
+    padding: 10px;
+}
+
+.gift_frid_items ul li:nth-child(3),
+.gift_frid_items ul li:nth-child(4){
+    text-align: right;
+}
+
+.gift_frid_items_img{
+    width: 220px;
+    height: 220px;
+    margin: auto;
+    position: relative;
+
+}
+
+.gift_frid_items:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.gift_frid_items_img::before{
+    content: "特價";
+    color: white;
+    background-color: red;
+    font-size: 17px;
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    left: -6px;
+    top: -6px;
+    transform:rotate(-15deg);
+
+}
+
+.gift_frid_items_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* 底頁數 */
+
+
+.run_page{
+    margin: 20px auto;
+    max-width: 1000px;
+    font-size: 0;
+}
+
+.run_page ul{
+    display: flex;
+    /* text-align: center; */
+    /* border: 1px solid red; */
+    justify-content: center;
+}
+
+.run_page ul li{
+    /* display: inline-block; */
+    text-align: center;
+    /* border: 1px solid blue; */
+    font-size: 16px;
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: #BCBCBC;
+    
+}
+
+.run_page ul li a{
+    color: black;   
+}
+
+.run_page ul li a:hover{
+    transform: scale(1.5);
+    display: inline-block;
+}
+
+
+.run_page ul li:first-child{
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+}
+
+.run_page ul li:nth-child(2){
+    border-radius: 5px 0 0 5px;
+    text-decoration: underline;
+}
+
+.run_page ul li:nth-child(6){
+    border-radius: 0px 5px 5px 0;
+}
+
+.run_page ul li:last-child{
+    border-radius: 0 5px 5px 0;
+    background-color: white;
+}

@@ -1,0 +1,293 @@
+
+/* 高度100% 字型 花樣歸零 */
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 首頁往右移135px */
+
+div.cat_index{
+    margin-left: 135px;
+}
+
+
+
+/* 左欄寬 */
+
+div aside.sidenav{
+    /* border:1px solid black; */
+    position: fixed;
+    left: 0;
+    width: 135px;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+/* 左欄LOGO */
+
+div aside.sidenav a.left_cat_log img{
+    width: 84px;
+
+}
+
+/* 左欄menu */
+
+
+
+
+div aside.sidenav a.left_menu_log{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left_menu_log label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.left_menu_log label:hover{
+    cursor: pointer;
+}
+
+div aside.sidenav a.left_menu_log div.left_menu_icon{
+    height: 23px;
+    width: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div aside.sidenav a.left_menu_log div.left_menu_icon span{
+    background-color: #FAA19D;
+    height: 3px;
+    width: 100%;
+}
+
+div aside.sidenav a.left_menu_log div.left_menu_icon span:nth-child(3){
+    width: 18px;
+}
+
+div aside.sidenav a.left_menu_log p.menu_text{
+    margin: 6px 0 0 0;
+    font-weight: bold;
+    color: #FAA19D;
+    
+}
+
+
+/* 左欄下排 */
+
+div aside.sidenav ul.social_icon{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    
+}
+
+div aside.sidenav ul.social_icon li{
+    padding: 3px;
+
+
+}
+
+div aside.sidenav ul.social_icon li a img{
+    width: 30px;
+
+}
+
+
+
+
+/* 隱藏欄區 */
+#putmenugod{
+    display: none;
+}
+
+#putmenugod:checked + section{
+    /* opacity: 1; */
+    /* display: block; */
+    transform: translate(0);
+    transition: 0.3s;
+    
+}
+
+
+section{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 120;
+    /* opacity: 0; */
+    /* display: none; */
+
+    transform: translate(-200%);
+    /* overflow: hidden; */
+}
+
+.nav_inner{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+    height: 100%;
+    
+    
+    
+}
+
+.nav_inner .a_head{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+    margin: 0 0 55px 0;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    
+}
+
+
+
+.nav_inner ul{
+    margin-bottom:55px ;
+}
+
+
+.nav_inner .a_head:hover{
+    background-color: #FAA19D;
+    color: white;
+}
+
+.nav_inner .a_body li{
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    color: black;
+    font-weight: normal;
+    margin: 20px 0 5px 100px;
+    border-radius: 10px;
+    
+}
+
+.nav_inner .a_body li:hover{
+    background-color: #FAA19D;
+    color: white;
+
+}
+
+.nav_inner .nav_left{
+    display:flex ;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10% 8% 10% 20%;
+    flex-grow: 1;
+
+    
+}
+
+.nav_inner .nav_right{
+    display:flex ;
+    flex-direction: column;
+    background-image: url("../images/background/灰底BG.jpg");
+    /* border: 1px solid red; */
+    flex-basis: 600px;
+    /* padding: 15% 0; */
+    /* flex-grow: 1; */
+
+}
+
+
+
+.nav_h2{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #216278;
+    padding-left: 50px;
+}
+
+.nav_right_block{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 10% 10% 10%;
+    justify-content: space-between;
+
+}
+
+
+.nav_right_block p{
+    font-size: 12px;
+    color: #616161;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    /* text-align: ; */
+    margin: 20px 0 0 0;
+    
+}
+
+
+
+.nav_right_block button{
+    background-color: white;
+    color: #FAA19D;
+    width: 80px;
+    height: 40px;
+    font-size: 13px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    margin-left: 86px;
+    margin-top: 20px;
+}
+
+.nav_right_block button:hover{
+    background-color: #FAA19D;
+    color: white;
+
+}
+
+.nav_h2_2{
+    padding-left: 90px;
+}
+
+
+
+
+.nav_img{
+    height: 140px;
+    width: 240px;
+    overflow: hidden;
+}
+
+.nav_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}

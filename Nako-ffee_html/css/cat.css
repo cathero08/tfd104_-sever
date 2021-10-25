@@ -1,0 +1,131 @@
+/* 首圖 */
+
+.cat_cathead{
+    width: 100%;
+    height: 75vh;
+    background-image: url("../images/background/cat_cat_head.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  bottom;
+}
+
+
+h1.cat_boss{
+    /* width: 1000px; */
+    margin: 70px auto 140px;
+    text-align: center;
+    color: #216278;
+    letter-spacing: 5px;
+    line-height: 40px;
+    font-size: 34px;
+    font-weight: bolder
+    ;
+}
+
+
+
+
+/* 內文 */
+
+
+.cat_info{
+    /* display: flex; */
+    margin-top: 100px;
+
+}
+
+
+
+.cat_info_1{
+    display: flex;
+    width: 85%;
+    max-width: 1200px;
+    margin: 100px auto;
+
+}
+
+.cat_info_2{
+    margin: 200px auto;
+    position: relative;
+}
+
+.cat_info_2::before{
+    background-color: #BCBCBC;
+    width: 105%;
+    height: 95%;
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -54px;
+    bottom: -55px;
+
+}
+
+.cat_info_left p.ca2{
+    color: #ececec;
+}
+
+
+.cat_info_left{
+    width: 45%;
+    padding: 0 60px;
+}
+
+.cat_info_left h2{
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.cat_info_left p{
+    font-size: 15px;
+    color: #c4c4c4;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.cat_info_right{
+    width: 55%;
+    
+}
+
+.cat_info_right img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+/* 第三隻 */
+
+.cat_info_left3{
+    width: 35%;
+    padding: 0 60px;
+}
+
+.cat_info_left3 h2{
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.cat_info_left3 p{
+    font-size: 15px;
+    color: #c4c4c4;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.cat_info_right3{
+    width: 65%;
+    
+}
+
+.cat_info_right3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

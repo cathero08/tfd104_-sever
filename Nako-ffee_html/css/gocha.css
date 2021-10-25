@@ -1,0 +1,285 @@
+/* 首圖 */
+
+.gocha_cathead{
+    width: 100%;
+    height: 75vh;
+    background-image: url("../images/background/gocha_cat_head.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  bottom;
+}
+
+
+h1.gocha_boss{
+    /* width: 1000px; */
+    margin: 70px auto 140px;
+    text-align: center;
+    color: #216278;
+    letter-spacing: 5px;
+    line-height: 40px;
+    font-size: 34px;
+    font-weight: bolder
+    ;
+}
+
+
+
+
+/* 內文 */
+
+/* body{
+    background-image: url("../images/background/首頁news背景.jpg");
+} */
+
+
+/* 右邊尋列 */
+
+.gocha_side{
+    display: flex;
+    max-width: 1000px;
+    margin: 70px auto;
+}
+
+.gocha_side_right{
+    /* background-color: tomato; */
+    flex-basis: 280px;
+}
+
+
+.gocha_side_right h3{
+    text-align: center;
+    margin: 0;
+}
+
+.gocha_side_right hr{
+    width: 160px;
+    background-color: black;
+    height: 2px;
+    border: none;
+}
+
+.gocha_side_right p{
+    width: 280px;
+    height: 500px;
+    /* background-color: thistle; */
+    padding: 0 50px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.gocha_side_right p::before{
+    background-image: url("../images/background/gocha_cat_1.png");
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 530px;
+    width: 210px;
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+    left: 30px;
+}
+
+
+/* 按鈕篩選 */
+h3.neko_search_down{
+    margin-top: 140px;
+}
+
+
+.search_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.search_side::before{
+    background-image: url("../images/background/gocha_cat_2.png");
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 490px;
+    width: 210px;
+    position: absolute;
+    z-index: -1;
+    top: -55px;
+    left: 35px;
+}
+
+.search_side select{
+    width: 190px;
+    height: 50px;
+    margin: 3px auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 20px;
+    border-radius: 5px;
+    border:none;
+    appearance: none;
+    cursor: pointer;
+    background-image: url("../images/background/下拉三角.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right 30% center;
+}
+
+.search_side select:hover{
+    transform: scale(1.1);
+}
+
+.search_side select.search_cat1{
+
+    margin-top: 40px;
+}
+
+.search_side button{
+    width: 190px;
+    height: 50px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 20px;
+    background-color: #C4C4C4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search_side button:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+/* 左邊大圖 */
+
+
+.gocha_side_left{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gocha_side_items{
+    margin: 0 40px 40px 0;
+}
+
+
+.gocha_side_items:hover{
+    transform: scale(1.1);
+}
+
+.gocha_side_items ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 150px;
+    margin: 10px 0 0 10px;
+    padding: 0;
+    
+}
+
+.gocha_side_items ul li{
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+
+.gocha_side_items_img{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+.gocha_side_items_img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+/* 底頁數 */
+
+
+.run_page{
+    margin: 20px auto;
+    max-width: 1000px;
+    font-size: 0;
+}
+
+.run_page ul{
+    display: flex;
+    /* text-align: center; */
+    /* border: 1px solid red; */
+    justify-content: center;
+}
+
+.run_page ul li{
+    /* display: inline-block; */
+    text-align: center;
+    /* border: 1px solid blue; */
+    font-size: 16px;
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: #BCBCBC;
+    
+}
+
+.run_page ul li a{
+    color: black;   
+}
+
+.run_page ul li a:hover{
+    transform: scale(1.5);
+    display: inline-block;
+}
+
+
+.run_page ul li:first-child{
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+}
+
+.run_page ul li:nth-child(2){
+    border-radius: 5px 0 0 5px;
+    text-decoration: underline;
+}
+
+.run_page ul li:nth-child(6){
+    border-radius: 0px 5px 5px 0;
+}
+
+.run_page ul li:last-child{
+    border-radius: 0 5px 5px 0;
+    background-color: white;
+}
+
+
+
