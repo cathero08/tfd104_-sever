@@ -137,6 +137,9 @@ div aside.sidenav ul.social_icon li a img{
     
 }
 
+.showthepage{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
 
 section{
     width: 100%;
@@ -147,35 +150,45 @@ section{
     /* display: none; */
     transform: translate(-100%);
     transition: 0.5s;
-    /* overflow: hidden; */
+    /* border: 2px solid red; */
 }
 
 .nav_inner{
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
-    
-    
-    
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    /* border: 2px solid blue; */
+      
+       
 }
+
+
+
+
+
+
+
 
 .nav_inner .a_head{
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
     color: black;
+    padding: 3px 4px;
     margin: 0 0 55px 0;
     /* border: 1px solid black; */
-    border-radius: 10px;
+    
     
 }
 
 
 
 .nav_inner ul{
-    margin-bottom:55px ;
+    margin-bottom:30px;
 }
 
 
@@ -190,7 +203,8 @@ section{
     color: black;
     font-weight: normal;
     margin: 20px 0 5px 100px;
-    border-radius: 10px;
+    width: 120px;
+    padding: 3px 4px;
     
 }
 
@@ -203,21 +217,37 @@ section{
 .nav_inner .nav_left{
     display:flex ;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.95);
+    
     padding: 10% 8% 10% 20%;
-    flex-grow: 1;
+    flex-grow: 1 ;
+    /* justify-content: space-around; */
+    /* border: 2px solid blue; */
+    /* min-width: 500px; */
 
     
 }
 
-.nav_inner .nav_right{
+.nav_inner .nav_rightbg{
     display:flex ;
     flex-direction: column;
     background-image: url("../images/background/灰底BG.jpg");
     /* border: 1px solid red; */
     flex-basis: 600px;
-    /* padding: 15% 0; */
-    /* flex-grow: 1; */
+    justify-content:flex-start;
+    flex: 1 1 500px;
+
+}
+
+
+
+.nav_inner .nav_right{
+    display:flex ;
+    flex-direction: column;
+    background-image: url("../images/background/灰底BG.jpg");
+    flex-basis: 600px;
+    justify-content:flex-start;
+    flex: 1 1 500px;
+    min-width: 450px;
 
 }
 
@@ -234,8 +264,9 @@ section{
 .nav_right_block{
     display: flex;
     flex-direction: column;
-    padding: 10% 10% 10% 10%;
+    padding: 0 0 0 10%;
     justify-content: space-between;
+    margin: 10% 0 0 0;
 
 }
 
@@ -266,10 +297,18 @@ section{
     margin-top: 20px;
 }
 
+.nav_right_block button a{
+    color: #FAA19D;
+}
+
 .nav_right_block button:hover{
     background-color: #FAA19D;
     color: white;
 
+}
+
+.nav_right_block button:hover a{
+    color: white;
 }
 
 .nav_h2_2{

@@ -6,7 +6,7 @@ footer.footer{
 
 footer .footer_f{
     /* border:1px solid red; */
-    width: 1000px;
+    max-width: 1000px;
     padding: 35px 35px 0 35px;
     display: flex;
     justify-content: space-between;
@@ -109,7 +109,7 @@ footer div.footer_cat_cash button::after{
 .footer_tibame{
     font-size: 13px;
     /* text-align: center; */
-    width: 1000px;
+    max-width:  1000px;
     margin: 0 auto;
     padding: 0 15%;
 }

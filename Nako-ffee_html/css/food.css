@@ -149,16 +149,18 @@ h1.food_boss{
 h2.food_simple{
     text-align:center ;
     font-size: 34px;
-    letter-spacing: 0px;
+    letter-spacing: -2px;
+    margin: 100px 0 40px;
 }
 
 
 p.food_sit{
     text-align: center;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
     font-size: 20px;
     font-weight: bold;
     color: #c4c4c4;
+    margin:0 0 40px 0 ;
 }
 
 
@@ -186,11 +188,20 @@ p.food_sit{
 }
 
 
+
+
 .bg-coffee0{
     margin: 50px;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: auto auto;
     vertical-align: top;
-    
+    column-gap: 60px;    
+    /* row-gap: 15px; */
+}
+
+
+.grid1234{
+    grid-area: 1 / 2 / 9 / 3;
 }
 
 .bg-coffee0 p{
@@ -201,29 +212,68 @@ p.food_sit{
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-.bg-coffee0 p:hover{
+.bg-coffee0 p:hover {
     cursor: pointer;
     background-color: #b4b4b4;
     color: white;
+    
 }
+
+/* 瘋狂hover */
+
+p.bg-coffee-on-1:hover ~ .bg-coffee{
+    background-image: url("../images/coffee/Americano_1.jpg");
+}
+p.bg-coffee-on-2:hover ~ .bg-coffee{
+    background-image: url("../images/coffee/SingleEspresso_2.jpg");
+}
+p.bg-coffee-on-3:hover ~ .bg-coffee{
+    background-image: url("../images/coffee/FlavoredCoffee_3.jpg");
+}
+p.bg-coffee-on-4:hover ~ .bg-coffee{
+    background-image: url("../images/coffee/Cappuccino_4.jpg");
+}
+p.bg-coffee-on-5:hover ~ .bg-coffee{
+    background-image: url("../images/coffee/Latte_5.jpg");
+}
+p.bg-coffee-on-6:hover ~ .bg-coffee{
+    background-image: url("../images/coffee/HazelnutLatte_6.jpg");
+}
+p.bg-coffee-on-7:hover ~ .bg-coffee{
+    background-image: url("../images/coffee/VanillaLatte_7.jpeg");
+}
+p.bg-coffee-on-8:hover ~ .bg-coffee{
+    background-image: url("../images/coffee/CaramelMacchiato_8.jpg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 .bg-coffee{
     background-image: url("../images/coffee/AdobeStock_267568050.jpg");
-    background-color: seashell;
     width: 340px;
     height: 330px;
-    content: "123";
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 110px 0 60px 0;
+    margin: 60px 0 10px 0;
     display: inline-block;
     top: -10px;
     position: relative;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
+
 
 
 .bg-coffee::before{
@@ -236,6 +286,17 @@ p.food_sit{
     top: -50px;
     left: 45px;
 }
+
+.bg-coffee img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
 
 
 

@@ -3,7 +3,7 @@
 div.cat_index main div.nekoffee_since_2020{
     /* border: 1px solid red; */
     display: flex;
-    width: 1000px;
+    max-width: 1000px;
     margin: 174px auto 0;
     font-size: 0;
 }
@@ -36,7 +36,7 @@ div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_img::after{
     height: 310px;
     z-index: -1;
     right: -40px;
-    bottom: -30px;
+    top: 40px;
     background-size: 12px;
 }
 
@@ -75,7 +75,7 @@ div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text p{
 div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text a.nekoffee_since_2020_button{
     font-size: 14px;
     font-weight: bold;
-    margin-left: 380px;
+    margin-left: 60%;
     color: black;
     position: relative;
     display: inline-block;
@@ -110,7 +110,7 @@ div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text a.nekoff
 div.cat_index main h2.if_wanttocatfamily{
     font-size: 20px;
     color: #216278;
-    width: 1000px;
+    max-width: 1000px;
     margin: 80px auto ;
     text-align: center;
     letter-spacing: 2px;
@@ -123,7 +123,7 @@ div.cat_index main h2.if_wanttocatfamily{
 
 div.cat_index main div.nekoffee_since_2020_2{
     display: flex;
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -191,7 +191,7 @@ div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_img::afte
     width: 380px;
     position: absolute;
     right: -38px;
-    bottom: -32px;
+    top: 43px;
     content: "";
     background-size: 12px;
     z-index: -1;
@@ -231,7 +231,7 @@ div.cat_index main div.happy_cat{
     /* border: 1px solid red; */
     position: relative;
     margin: 0 auto;
-    width: 1000px;
+    max-width: 1000px;
 }
 
 div.cat_index main div.happy_cat::before{
@@ -314,6 +314,7 @@ div.cat_index main div.happy_cat div.happy_cat_all div.happy_cat_single{
     width: 180px;
     margin: 40px 30px 0 0;
     position: relative;
+    transition: 0.5s;
 }
 
 div.cat_index main div.happy_cat div.happy_cat_all div.happy_cat_single:hover{
@@ -358,7 +359,7 @@ div.cat_index main div.happy_cat div.happy_cat_all div.happy_cat_single ul.happy
 div.cat_index main div.index_cat_hand{
     /* border: 1px solid red; */
     margin: 0 auto;
-    width: 1000px;
+    max-width: 1000px;
 }
 
 
@@ -367,6 +368,7 @@ div.cat_index main div.index_cat_hand h2{
     color: #216278;
     margin: 250px 0 0 0;
     position: relative;
+    
 }
 
 div.cat_index main div.index_cat_hand h2::before{
@@ -402,7 +404,7 @@ div.cat_index main div.index_cat_hand h2::after{
 
 
 div.cat_index main div.grid{
-    width: 1000px;
+    max-width: 1000px;
     margin: 20px auto 0;
     /* border: 1px solid red; */
 
@@ -423,6 +425,7 @@ div.cat_index main div.grid_cat_container a.grid_cat_items{
     border-radius: 5px;
     /* border: 1px solid red; */
     overflow: hidden;
+    transition: 0.5s;
 }
 
 div.cat_index main div.grid_cat_container a.grid_cat_items img{
@@ -455,19 +458,21 @@ div.cat_index main div.grid_cat_container a p{
     padding: 5px 15%;
     background-color: rgba(196, 196, 196, 0.6);
     opacity: 0;
+    transition: 0.5s;
     
 }
 
 div.cat_index main div.grid_cat_container a:hover p{
-    animation: cat_text;
-    animation-duration: 1s;
-    animation-fill-mode: both;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    opacity: 1;
 }
 
 div.cat_index main div.grid_cat_container a.grid_cat_items:hover {
-    animation: cat_zoominon;
-    animation-duration: 1s;
-    animation-fill-mode: both;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    
+
 }
 
 

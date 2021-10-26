@@ -56,8 +56,8 @@ form{
 .contact_inside  input{
     width: 458px;
     height: 45px;
-    font-size: 20px;
-    background: #c4c4c4;
+    font-size: 18px;
+    background: rgba(212, 212, 212, 0.5);
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -72,10 +72,12 @@ form{
 .contact_inside textarea{
     width: 458px;
     height: 319px;
-    background: #c4c4c4;
+    background: rgba(212, 212, 212, 0.5);
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
+    font-size: 18px;
+    resize: vertical ;
 
 }
 
@@ -83,6 +85,31 @@ form{
     background-color: #d4d4d4;
     outline: 2px solid rgb(0, 0, 0,0.5);
 }  
+
+
+.contact_button_side{
+    display: flex;
+    justify-content: right;
+}
+
+.contact_button{
+    text-align: center;
+    width: 150px;
+    height: 41px;
+    font-size: 20px;
+    background-color: #BCBCBC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px rgb(0 0 0 / 70%);
+    cursor: pointer;
+    
+}
+
+.contact_button:hover{
+    background-color: #ececec;
+    color: #BCBCBC;
+}
 
 
 

@@ -2,21 +2,21 @@
 
 div.cat_index main div.information{
     /* border: 1px solid red; */
-    width: 970px;
-    margin: 40px auto 20px;
+    max-width: 970px;
+    margin: 90px auto 200px;
 }
 
 div.cat_index main div.information div.information_head{
      /* border: 1px solid red;     */
      color: #216278;
      font-weight: bolder;
-     font-size: 20px;
+     font-size: 28px;
      
 }
 
 div.cat_index main div.information div.information_side{
      /* border: 1px solid blue; */
-     margin-top: 20px;
+     margin-top: 50px;
 
 
 }
@@ -24,16 +24,24 @@ div.cat_index main div.information div.information_side{
 div.cat_index main div.information div.information_inner{
      /* border: 1px solid red; */
      display: flex;
+     overflow: hidden;
+     
 }
 
 div.cat_index main div.information div.information_item{
-     width: 300px;
+     width: 350px;
      margin-right: 70px;
+     flex-shrink: 0;
+     border-bottom:1px solid rgba(0, 0, 0, 0.5) ;
+}
 
+div.cat_index main div.information div.information_item:hover{
+     box-shadow: 0 2px 0px rgba(0, 0, 0, 1);
+     cursor: pointer;
 }
 
 div.cat_index main div.information div.information_item span{
-     font-size: 13px;
+     font-size: 15px;
 }
 
 div.cat_index main div.information div.information_item p{
