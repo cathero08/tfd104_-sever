@@ -8,6 +8,7 @@
     <link href="./css/左排欄.css" rel="stylesheet">
     <link href="./css/每頁頁尾.css" rel="stylesheet">
     <link href="./css/News_page.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -15,12 +16,16 @@
 
 <body>
     <div class="cat_index">
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+        <input type="checkbox" id="putmenugod"  >
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+
         <aside class="sidenav">
             <a href="./index.html" class="left_cat_log">
                 <img src="./images/background/左側logo.png" alt="logo">
             </a>
             <a href="#" class="left_menu_log">
-                <label for="putmenugod">
+                <label for="putmenugod" >
                     <div class="left_menu_icon">
                         <span></span>
                         <span></span>
@@ -31,8 +36,12 @@
                     <p class="menu_text">
                         Menu
                     </p>
+                
+                    
                 </label>
+
             </a>
+            
 
             
             <ul class="social_icon">
@@ -43,9 +52,9 @@
 
         </aside>
 
-        <!-- 左欄的隱藏欄 -->
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
 
-        <input type="checkbox" id="putmenugod">
+        
         <section>
             
             <div class="nav_inner">
@@ -56,10 +65,11 @@
                             <a class="a_body" href="./gocha.html"><li>˙貓咪認養</li></a>
                             <a class="a_body" href="./contact.html"><li>˙聯絡我們</li></a>
                     </ul>
-                    <ul><a class="a_head showthepage" href="./news.html">02 最新消息</a></ul>
+                    <ul><a class="a_head" href="./news.html">02 最新消息</a></ul>
                     <ul><a class="a_head" href="./food.html">03 菜單</a></ul>
                     <ul><a class="a_head" href="./cat.html">04 店貓資訊</a></ul>
                     <ul><a class="a_head" href="./gift.html">05 周邊商品</a></ul>
+                    <label class="menu_close" for="putmenugod">X close</label>
                     
                 </div>
                 <div class="nav_rightbg">
@@ -91,16 +101,16 @@
 
 
         <main>
-            <div class="News_cathead"></div>
+            <div class="News_cathead" ></div>
                 <h1 class="News_boss">最新消息
                     <br>News
                 </h1>
 
-                <div class="news_block">
+                <div class="news_block" data-aos="fade-right">
                     <div class="news_time_left">
                         2018.09
                     </div>
-                    <div class="news_right">
+                    <div class="news_right" >
                         <h3 class="news_h3">到哪裡也和暖暖的喵咪在一起</h3>
                         <p>穿T恤表達對貓咪滿滿的愛意<br>
                             由漫畫家Rinrin Yamano繪製的Gyumu Gyumu貓的插圖以全彩色印刷在正面和dodon上。上臂套的長袖，也就是不太緊身的寬鬆領口，非常適合穿著。</p>
@@ -108,7 +118,7 @@
                     </div>
                 </div>
 
-                <div class="news_block">
+                <div class="news_block" data-aos="fade-left">
                     <div class="news_time_left">
                         2018.09
                     </div>
@@ -120,7 +130,7 @@
                     </div>
                 </div>
 
-                <div class="news_block">
+                <div class="news_block" data-aos="fade-right">
                     <div class="news_time_left">
                         2018.09
                     </div>
@@ -191,5 +201,30 @@
 
         </main>
     </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        let icon = document.getElementsByClassName("left_menu_log")[0];
+        let menu_text = document.getElementsByClassName("menu_text")[0];
+        // console.log(menu_text.innerText)
+
+        let checkboxedicon = document.getElementById("putmenugod");
+        checkboxedicon.addEventListener("click",function(){
+            if(checkboxedicon.checked){
+                icon.setAttribute("class", "left_menu_log_close");
+                menu_text.innerText = "close"
+        }else{
+                icon.setAttribute("class", "left_menu_log");
+                menu_text.innerText = "Menu"
+        }
+        })
+        
+    
+    </script>
 </body>
 </html>

@@ -11,7 +11,6 @@
 
 
 h1.gift_boss{
-    /* width: 1000px; */
     margin: 70px auto 140px;
     text-align: center;
     color: #216278;
@@ -92,7 +91,7 @@ h1.gift_boss{
     cursor: pointer;
 }
 
-.gift_frid_items_img::before{
+.sale::before{
     content: "特價";
     color: white;
     background-color: red;
@@ -122,7 +121,7 @@ h1.gift_boss{
 
 .run_page{
     margin: 20px auto;
-    max-width: 1000px;
+    max-width: 1140px;
     font-size: 0;
 }
 

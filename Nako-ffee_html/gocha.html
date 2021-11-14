@@ -17,12 +17,16 @@
 
     <body>
         <div class="cat_index">
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+            <input type="checkbox" id="putmenugod"  >
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+
             <aside class="sidenav">
                 <a href="./index.html" class="left_cat_log">
                     <img src="./images/background/左側logo.png" alt="logo">
                 </a>
                 <a href="#" class="left_menu_log">
-                    <label for="putmenugod">
+                    <label for="putmenugod" >
                         <div class="left_menu_icon">
                             <span></span>
                             <span></span>
@@ -33,8 +37,12 @@
                         <p class="menu_text">
                             Menu
                         </p>
+                    
+                        
                     </label>
+
                 </a>
+                
 
                 
                 <ul class="social_icon">
@@ -45,9 +53,9 @@
 
             </aside>
 
-            <!-- 左欄的隱藏欄 -->
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
 
-            <input type="checkbox" id="putmenugod">
+            
             <section>
                 
                 <div class="nav_inner">
@@ -55,13 +63,14 @@
                     <div class="nav_left">
                         <ul><a class="a_head" href="./about.html">01 關於我們</a>
                                 <a class="a_body" href="./about.html"><li>˙品牌介紹</li></a>
-                                <a class="a_body " href="./gocha.html"><li class="showthepage">˙貓咪認養</li></a>
+                                <a class="a_body" href="./gocha.html"><li>˙貓咪認養</li></a>
                                 <a class="a_body" href="./contact.html"><li>˙聯絡我們</li></a>
                         </ul>
                         <ul><a class="a_head" href="./news.html">02 最新消息</a></ul>
                         <ul><a class="a_head" href="./food.html">03 菜單</a></ul>
                         <ul><a class="a_head" href="./cat.html">04 店貓資訊</a></ul>
                         <ul><a class="a_head" href="./gift.html">05 周邊商品</a></ul>
+                        <label class="menu_close" for="putmenugod">X close</label>
                         
                     </div>
                     <div class="nav_rightbg">
@@ -89,6 +98,7 @@
                 </div>
             </section>
 
+            
             <main>
                 <div class="gocha_cathead"></div>
                 <h1 class="gocha_boss">貓咪認養
@@ -356,12 +366,24 @@
         </div>    
 
 
+        <script>
+            let icon = document.getElementsByClassName("left_menu_log")[0];
+            let menu_text = document.getElementsByClassName("menu_text")[0];
+            // console.log(menu_text.innerText)
 
-
-
-
-
-
+            let checkboxedicon = document.getElementById("putmenugod");
+            checkboxedicon.addEventListener("click",function(){
+                if(checkboxedicon.checked){
+                    icon.setAttribute("class", "left_menu_log_close");
+                    menu_text.innerText = "close"
+               }else{
+                    icon.setAttribute("class", "left_menu_log");
+                    menu_text.innerText = "Menu"
+               }
+            })
+            
+           
+        </script>
         
     </body>
 </html>

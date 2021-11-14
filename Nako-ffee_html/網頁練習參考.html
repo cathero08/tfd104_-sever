@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        img{
+            max-width: 100%;
+        }
+        
+        :root{
+            --header-height:60px;
+            --aside-width:240px;
+        }
+
+        button.btn_hamburger{
+            display: none;
+        }
+
+        @media (max-width: 767.98px){
+            button.btn_hamburger{
+                display: inline-block;
+            }
+        }
+
+
+
+        /* ==============header區域================== */
+        .header{
+            border: 1px solid red;
+            width: 100%;
+            height: var(--header-height);
+            background-color: lightgrey;
+            position: sticky;
+            top: 0;
+        }
+
+        /* =================aside======================== */
+
+        .aside{
+            border: 1px solid blue;
+            position: fixed;
+            background-color: #fee094;
+            left: 0;
+            top: var(--header-height);
+            width: var(--aside-width);
+            height: calc(100% - var(--header-height));
+            overflow-y: scroll;
+            transition: all 1s;
+        }
+        @media (max-width: 767.98px){
+            .aside{
+                top:0;
+                height: 100%;
+                transform: translate(-100%);
+            }
+            aside.aside.-on{
+                transform: translate(0);
+            }
+        }
+
+
+        /* aside.aside nav.nav{
+            border: 1px solid black;
+        } */
+
+        aside.aside nav.nav ul.nav_list{
+            /* border: 1px solid purple; */
+            list-style: none;
+            margin: 0;
+            padding: 20px 0;
+            
+        }
+        /* aside.aside nav.nav ul.nav_list > li{
+            border: 1px solid green;
+            
+        } */
+        aside.aside nav.nav ul.nav_list > li > a{
+            /* border-bottom: 1px solid blue; */
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        aside.aside nav.nav ul.nav_list > li > a::after{
+            position: absolute;
+            content: "";
+            /* border: 1px solid red; */
+            left: 0;
+            bottom: 0;
+            width: 95%;
+            left: 50%;
+            transform: translate(-50%);
+            height: 1px;
+            background-color: red;
+        }
+
+        aside.aside nav.nav ul.nav_list > li:last-child > a::after{
+            display: none;
+        }
+
+
+        /* =====================main======================== */
+
+        main.main{
+            border:  1px solid green;
+            width: calc(100% - var(--aside-width));
+            margin-left: var(--aside-width);
+            background-color: lightblue;
+            min-height: calc(100vh - var(--header-height));
+            padding: 20px;
+            transition: all 1s;
+        }
+
+
+        @media  (max-width:767.98px) {
+            main.main{
+                width: 100%;
+                margin-left: 0 ;
+
+            }
+            
+        }
+
+        main.main ul.item_list{
+            list-style: none;
+            margin:0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        main.main ul.item_list > li{
+            width: calc((100% - 60px) / 4);
+            margin-right: 20px;
+        }
+
+        @media  (max-width:767.98px) {
+            main.main ul.item_list > li{
+                width: calc((100% - 20px) / 2);
+            }
+        }
+        main.main ul.item_list > li:nth-child(4n){
+            margin-right: 0;
+        }
+        @media (max-width:767.98px){
+            main.main ul.item_list > li:nth-child(2n){
+            margin-right: 0;
+           }
+        }
+        
+
+        span.item_text{
+               white-space: nowrap;
+               text-overflow: ellipsis;
+               overflow: hidden;
+               display: block;
+        }
+
+    </style>
+</head>
+<body>
+        <header class="header">
+            <button class="btn_hamburger" type="button">按鈕</button>
+        </header>
+
+        <aside class="aside">
+            <button class="btn_hamburger" type="button">按鈕</button>
+            
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li><a href="#">連結一</a></li>
+                    <li><a href="#">連結二</a></li>
+                    <li><a href="#">連結三</a></li>
+                    <li><a href="#">連結四</a></li>
+                    <li><a href="#">連結五</a></li>
+                    <li><a href="#">連結六</a></li>
+                    <li><a href="#">連結一</a></li>
+                    <li><a href="#">連結二</a></li>
+                    <li><a href="#">連結三</a></li>
+                    <li><a href="#">連結四</a></li>
+                    <li><a href="#">連結五</a></li>
+                    <li><a href="#">連結六</a></li>
+                    <li><a href="#">連結一</a></li>
+                    <li><a href="#">連結二</a></li>
+                    <li><a href="#">連結三</a></li>
+                    <li><a href="#">連結四</a></li>
+                    <li><a href="#">連結五</a></li>
+                    <li><a href="#">連結六</a></li>
+                    <li><a href="#">連結一</a></li>
+                    <li><a href="#">連結二</a></li>
+                    <li><a href="#">連結三</a></li>
+                    <li><a href="#">連結四</a></li>
+                    <li><a href="#">連結五</a></li>
+                    <li><a href="#">連結六</a></li>
+                    <li><a href="#">連結一</a></li>
+                    <li><a href="#">連結二</a></li>
+                    <li><a href="#">連結三</a></li>
+                    <li><a href="#">連結四</a></li>
+                    <li><a href="#">連結五</a></li>
+                    <li><a href="#">連結六</a></li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <main class="main">
+            
+            
+            <ul class="item_list">
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="img_block">
+                            <img src="https://fakeimg.pl/400x300/">
+                        </div>
+                        <span class="item_text">這是影片這是影片這是影片這是影片這是影片這是影片</span>
+                    </a>
+                </li>
+            </ul>
+        </main>
+
+
+        <script>
+            var btn_el = document.getElementsByClassName("btn_hamburger");
+            for(let i = 0; i < btn_el.length; i++){
+                btn_el[i].addEventListener("click", function(){
+
+                    var aside_el = document.getElementsByClassName("aside")[0];
+                    aside_el.classList.toggle("-on");
+                });
+            }
+        </script>
+    
+</body>
+</html>

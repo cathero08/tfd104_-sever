@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh=tw">
-    <head>
-        <title>練</title>
-        <meta charset="utf-8">
+<html lang="zh-Hant" dir="ltr">
 
-    </head>
-    <body>
-        
-        <script>
-            "use strict";
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    .search{
+      padding: 6px 10px 6px 30px;
+      background-image: url("https://alldata.sgp1.digitaloceanspaces.com/images/searchicon.png");
+      background-repeat: no-repeat;
+      background-position: left 5px center;
+      transition: 2s;
+      border-radius: 5px;
+      width: 5%;
+    }
 
-            function array_avg(scores){
-                var total_score=0 ;
-                for(let i = 0; i < scores.length; i++){
-                    total_score +=scores[i];
+    .search:focus{
+      width: 50%;
+      transition: 2s;
+    }
 
-                }
-                var avarage_score = (total_score / scores.length ).toFixed(2);
+    
 
-                console.log(avarage_score);
-                return avarage_score;
-                
-            }
+  </style>
+</head>
 
-            var students_score = [50, 30 , 87, 99, 71, 78];
-            var avg_result1 = array_avg(students_score);
+<body>
 
-            var students_score2 = [50 ,30 ,87 ,99 ,71 ,78 ,100];
-            var avg_result2 = array_avg(students_score2);
+  <input type="text" class="search" placeholder="搜尋..">
 
-            console.log(avg_result1);
-            console.log(avg_result2);
-        </script>
-    </body>
+  <script>
+    
+
+  </script>
+</body>
+
 </html>

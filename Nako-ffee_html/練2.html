@@ -1,110 +1,150 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="zh-Hant">
 
 <head>
-    <title>ss</title>
     <meta charset="utf-8">
+    <title>1213</title>
 
     <style>
-        
+        * {
+            box-sizing: border-box;
+        }
 
-.bg-coffee0{
-    margin: 50px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows:auto auto auto auto auto auto auto auto ;
-    vertical-align: top;
-    gap: 20px;
-    
-    
-}
+        input.card {
+            width: 42px;
+        }
 
-
-.grid123{
-    grid-area: 1 / 1 / 4 / 2;
-}
-
-.bg-coffee0 p{
-    background-color: #E5E5E5;
-    padding: 8px 25px 8px 55px;
-    margin: 0 0 15px 0;
-    font-weight: bold;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.bg-coffee0 p:hover {
-    cursor: pointer;
-    background-color: #b4b4b4;
-    color: white;
-    
-}
-
-.bg-coffee0 p:hover .bg-coffee{
-    background-image: url("../images/coffee/Americano_1.jpg");
-}
-
-
-
-
-
-
-.bg-coffee{
-    background-image: url("../images/coffee/AdobeStock_267568050.jpg");
-    width: 340px;
-    height: 330px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 110px 0 60px 0;
-    display: inline-block;
-    top: -10px;
-    position: relative;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-}
-
-
-
-.bg-coffee::before{
-    background-color: #216278;
-    width: 340px;
-    height: 330px;
-    z-index: -1 ;
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: 45px;
-}
-
-.bg-coffee img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+        .-error {
+            border: 1px solid red;
+        }
     </style>
+
+    <script src="./js/is.min.js"></script>
 </head>
 
 <body>
-
-    <div class="bg-coffee0">
-        <p class="bg-coffee-on-1 grid123">經典黑咖啡Americano</p>
-        <p class="bg-coffee-on-2 grid123"">濃縮咖啡Single Espresso</p>
-        <p class="bg-coffee-on-3 grid123"">特調咖啡Flavored Coffee</p>
-        <p class="bg-coffee-on-4 grid123"">卡布奇諾Cappuccino</p>
-        <p class="bg-coffee-on-5 grid123"">經典拿鐵Latte</p>
-        <p class="bg-coffee-on-6 grid123"">榛果拿鐵Hazelnut Latte</p>
-        <p class="bg-coffee-on-7 grid123"">香草拿鐵Vanilla Latte</p>
-        <p class="bg-coffee-on-8 grid123"">焦糖瑪琪朵Caramel Macchiato</p>
-
-        <div class="bg-coffee grid123"" id="bg-coffeecafe">
+    <form action="#" method="#" id="the_form">
+        <div class="group">
+            <label>帳號：</label>
+            <input type="text" id="account">
         </div>
-       
-    </div>
+        <div class="group">
+            <label>email：</label>
+            <input type="email" id="email">
+        </div>
+        <div class="group">
+            <label>信用卡卡號：</label>
+            <input type="text" class="card" maxlength="4">
+            <input type="text" class="card" maxlength="4">
+            <input type="text" class="card" maxlength="4">
+            <input type="text" class="card" maxlength="4">
+        </div>
+        <div class="group">
+            <label>商品數量：</label>
+            <input type="range" min="1" max="10" value="5" class="product_count">
+            <span class="num" data-default="5">5</span>
+        </div>
+        <div class="group">
+            <button type="reset">清空</button>
+            <button type="submit">資料送出</button>
+        </div>
+    </form>
+    <script>
 
-    
+        // 介面調整：
+        // 信用卡介面：keydown、keyup、focus
+        
+        var cards = document.getElementsByClassName("card");
+
+        for(let i = 0; i < cards.length; i++){
+            cards[i].addEventListener("keydown",function(e){
+                // console.log(e.which)
+                if( (e.which >= 48 && e.which<=57) || e.which === 8 || (e.which >= 96 && e.which <= 105)){
+                    // console.log(e.target.value.length);
+                    if(e.target.value.length == 0 && e.which == 8){
+                        let previous_el = this.previousElementSibling;
+                        previous_el.focus();
+                    }
+
+                }else{
+                    e.preventDefault();
+                }
+                
+            });
+
+            cards[i].addEventListener("keyup",function(e){
+                let str = (e.target.value).replace(/\D/ig, "");
+                e.target.value =str ;
+                console.log(str.length);
+
+                if(str.length == 4){
+                    let next_el = this.nextElementSibling;
+                    if(next_el){
+                        next_el.focus();
+                    }
+                }
+            });
+        }
+        // 商品數量的介面：mousemove、reset 事件
+        var product_count_el = document.getElementsByClassName("product_count");
+        var num_el =document.getElementsByClassName("num")[0];
+
+
+        product_count_el[0].addEventListener("mousemove", function(){
+            num_el.innerHTML = this.value;
+        });
+
+        
+
+        var the_form_el = document.getElementById("the_form");
+        the_form_el.addEventListener("reset", function(){
+            // console.log("reset");
+
+            num_el.innerHTML = num_el.getAttribute("data-default");
+        })
+
+        // 資料送出時(submit)，資料驗證：
+        the_form_el.addEventListener("submit", function(e){
+            let account_el = document.getElementById("account");
+            let email_el = document.getElementById("email");
+
+            let card_str = "";
+            let cards = document.getElementsByClassName("card");
+            for(let i = 0; i < cards.length; i++){
+                // console.log(cards[0].value);
+                card_str += cards[i].value;
+            }
+            
+            let send_data =true;
+
+            if(account_el.value == ""){
+                account_el.classList.add("-error");
+                send_data = false;
+            }else{
+                account_el.classList.remove("-error");
+            }
+
+            if(is.email(email_el.value)){
+                email_el.classList.remove("-error");
+            }else{
+                email_el.classList.add("-error");
+                send_data = false;
+            }
 
 
 
-    
+            if(!send_data){
+                e.preventDefault();
+            }
+        })
+
+        // 帳號必填
+        // email：符合格式
+        // 信用卡卡號：符合格式
+    </script>
+
+
+
 </body>
 
 </html>

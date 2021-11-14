@@ -8,6 +8,7 @@
         <link href="./css/左排欄.css" rel="stylesheet">
         <link href="./css/每頁頁尾.css" rel="stylesheet">
         <link href="./css/cat.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/animate.css">
 
     </head>
 
@@ -15,12 +16,16 @@
 
     <body>
         <div class="cat_index">
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+            <input type="checkbox" id="putmenugod"  >
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+
             <aside class="sidenav">
                 <a href="./index.html" class="left_cat_log">
                     <img src="./images/background/左側logo.png" alt="logo">
                 </a>
                 <a href="#" class="left_menu_log">
-                    <label for="putmenugod">
+                    <label for="putmenugod" >
                         <div class="left_menu_icon">
                             <span></span>
                             <span></span>
@@ -31,8 +36,12 @@
                         <p class="menu_text">
                             Menu
                         </p>
+                    
+                        
                     </label>
+
                 </a>
+                
 
                 
                 <ul class="social_icon">
@@ -43,9 +52,9 @@
 
             </aside>
 
-            <!-- 左欄的隱藏欄 -->
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
 
-            <input type="checkbox" id="putmenugod">
+            
             <section>
                 
                 <div class="nav_inner">
@@ -58,8 +67,9 @@
                         </ul>
                         <ul><a class="a_head" href="./news.html">02 最新消息</a></ul>
                         <ul><a class="a_head" href="./food.html">03 菜單</a></ul>
-                        <ul><a class="a_head showthepage" href="./cat.html">04 店貓資訊</a></ul>
+                        <ul><a class="a_head" href="./cat.html">04 店貓資訊</a></ul>
                         <ul><a class="a_head" href="./gift.html">05 周邊商品</a></ul>
+                        <label class="menu_close" for="putmenugod">X close</label>
                         
                     </div>
                     <div class="nav_rightbg">
@@ -99,22 +109,22 @@
 
                 <div class="cat_info">
                     <div class="cat_info_1"> 
-                        <div class="cat_info_left">
-                            <h2>貓仔</h2>
+                        <div class="cat_info_left " >
+                            <h2 class="wow animate__animated animate__bounce">貓仔</h2>
                             <p>非常活潑好動，從還是小貓時期就像一個鬥士般喜歡挑戰各種新事物，好比說抓蟲蟲、看鳥、逗貓棒等等都能引起牠們極大的注意。在個性及脾氣上比較偏向喜怒無常，一下高興一下又不爽
                                 。
                                 <br>
                                 <br>
                                 貓仔非常愛喝客人的水（裝在透明玻璃杯的自來水），還有酷愛會發熱的東西（例如枱燈、筆電）如果你具備以上東西，她有99％的機率會去騷擾你。。</p>
                         </div>
-                        <div class="cat_info_right"><img src="./images/background/cat_information_1.jpg" alt="貓1"></div>
+                        <div class="cat_info_right wow animate__animated animate__bounceInRight"><img src="./images/background/cat_information_1.jpg" alt="貓1"></div>
                     </div>
                 </div>
 
-                <div class="cat_info_1 cat_info_2"> 
+                <div class="cat_info_1 cat_info_2" > 
                     <div class="cat_info_right"><img src="./images/background/cat_information_2.jpg" alt="貓1"></div>
                     <div class="cat_info_left">
-                        <h2>二妹<br>
+                        <h2 class="wow animate__animated animate__shakeY">二妹<br>
                             (糧の使徒)</h2>
                         <p class="ca2">愛窩大腿，只要客人盤腿坐在地上，
                             這孩子就會很努力的走過來爬上大腿
@@ -127,12 +137,12 @@
                                 
                 <div class="cat_info_1"> 
                     <div class="cat_info_left3">
-                        <h2>小弟<br>
+                        <h2 class="wow animate__animated animate__swing">小弟<br>
                             (搞事仔)</h2>
                         <p>
                             搗亂又狂野，雖然比較有警戒心，但還算是容易親近的小子，一旦是牠認可的對象，翻肚的、呼嚕嚕照樣來！</p>
                     </div>
-                    <div class="cat_info_right3"><img src="./images/background/cat_information_3.jpg" alt="貓1"></div>
+                    <div class="cat_info_right3 wow animate__animated animate__lightSpeedInRight"><img src="./images/background/cat_information_3.jpg" alt="貓1"></div>
                 </div>
                 
 
@@ -184,5 +194,30 @@
 
         </div>
         
+
+
+
+        <script src="./js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script>
+            let icon = document.getElementsByClassName("left_menu_log")[0];
+            let menu_text = document.getElementsByClassName("menu_text")[0];
+            // console.log(menu_text.innerText)
+
+            let checkboxedicon = document.getElementById("putmenugod");
+            checkboxedicon.addEventListener("click",function(){
+                if(checkboxedicon.checked){
+                    icon.setAttribute("class", "left_menu_log_close");
+                    menu_text.innerText = "close"
+               }else{
+                    icon.setAttribute("class", "left_menu_log");
+                    menu_text.innerText = "Menu"
+               }
+            })
+            
+           
+        </script>
     </body>
 </html>

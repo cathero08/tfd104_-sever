@@ -6,12 +6,11 @@
     background-image: url("../images/background/gocha_cat_head.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position:  bottom;
+    background-position:  right 0px bottom 0px ;
 }
 
 
 h1.gocha_boss{
-    /* width: 1000px; */
     margin: 70px auto 140px;
     text-align: center;
     color: #216278;
@@ -28,7 +27,7 @@ h1.gocha_boss{
 /* 內文 */
 
 /* body{
-    background-image: url("../images/background/首頁news背景.jpg");
+    background-color: rgba(250, 161, 157, .1)
 } */
 
 
@@ -36,15 +35,23 @@ h1.gocha_boss{
 
 .gocha_side{
     display: flex;
-    max-width: 1000px;
+    max-width: 1140px;
     margin: 70px auto;
 }
+
+@media (max-width: 900px){
+    .gocha_side{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+
 
 .gocha_side_right{
     /* background-color: tomato; */
     flex-basis: 280px;
 }
-
 
 .gocha_side_right h3{
     text-align: center;
@@ -84,12 +91,25 @@ h1.gocha_boss{
     left: 30px;
 }
 
+@media (max-width: 900px){
+    .gocha_side_right{
+        flex-basis: auto;
+    }
+    .gocha_side_right p{
+        width: auto;
+        height: auto;
+        background-image: url("../images/background/灰底BG.jpg");
+    }
+    .gocha_side_right p::before{
+        display: none;
+    }
+}
+
 
 /* 按鈕篩選 */
 h3.neko_search_down{
     margin-top: 140px;
 }
-
 
 .search_side{
     display: flex;
@@ -112,8 +132,20 @@ h3.neko_search_down{
     left: 35px;
 }
 
+@media (max-width: 900px){
+    h3.neko_search_down{
+        margin:0 auto;
+    }
+    .search_side::before{
+        display: none;
+    }
+    .search_side{
+        background-image: url("../images/background/灰底BG.jpg");
+    }
+}
+
 .search_side select{
-    width: 190px;
+    width: 165px;
     height: 50px;
     margin: 3px auto;
     text-align: center;
@@ -141,7 +173,7 @@ h3.neko_search_down{
 }
 
 .search_side button{
-    width: 190px;
+    width: 165px;
     height: 50px;
     margin: 20px auto;
     text-align: center;
@@ -149,7 +181,7 @@ h3.neko_search_down{
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 20px;
-    background-color: #C4C4C4;
+    background-color: #216278;
     color: white;
     border: none;
     border-radius: 5px;
@@ -173,6 +205,7 @@ h3.neko_search_down{
 .gocha_side_left{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .gocha_side_items{
@@ -218,7 +251,14 @@ h3.neko_search_down{
 }
 
 
-
+@media (max-width: 767.98px){
+    .gocha_side_left{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        overflow: auto;
+    }
+}
 
 
 
@@ -230,7 +270,7 @@ h3.neko_search_down{
 
 .run_page{
     margin: 20px auto;
-    max-width: 1000px;
+    max-width: 1140px;
     font-size: 0;
 }
 

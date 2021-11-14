@@ -12,7 +12,6 @@
 
 
 h1.about_boss{
-    /* width: 1000px; */
     margin: 70px auto 140px;
     text-align: center;
     color: #216278;
@@ -23,21 +22,22 @@ h1.about_boss{
     ;
 }
 
-/* .abuot_text{
-    margin: 0 auto;
-    width: 1000px;
-} */
 
 p.abuot_text_inside{
     
     font-size: 15px;
-    line-height: 25px;
+    line-height: 30px;
     letter-spacing: 0.5px;
     font-weight: bold;
     margin: 0px;
+    padding: 0 20px;
 }
 
-
+@media (max-width: 900px){
+    p.abuot_text_inside{
+        padding: 20px;
+    }
+}
 
 div.about_catlogo{
     
@@ -54,12 +54,20 @@ div.about_catlogo{
 }
 
 .about_h2{
-    font-size: 20px;
+    font-size: 24px;
     /* font-weight: bold; */
     letter-spacing: 1px;
     text-align: center;
     margin: 80px auto;
     color: #216278;
+}
+
+@media (max-width: 413.98px){
+    .about_h2{
+        max-width: 413.98px; 
+        /* word-break: keep-all; */
+        padding: 0 30px;
+    }
 }
 
 
@@ -68,12 +76,22 @@ div.about_catlogo{
     display: flex;
     justify-content: center;
     /* margin: 0 10%; */
-    max-width: 1000px;
+    max-width: 1140px;
     margin: 0 auto 60px;
 }
 
 p.about_boss_story{
     margin: 60px 30px 20px 0;
+}
+
+@media (max-width: 900px){
+    .about_boss{
+        display: flex;
+        flex-direction: column;
+    }
+    p.about_boss_story{
+        margin: 0 auto;
+    }
 }
 
 
@@ -102,4 +120,18 @@ p.about_boss_story{
     top: -3px;
     z-index: -1;
     
+}
+
+@media (max-width: 413.98px){
+    .about_boss_photo img{
+       width:  100%;
+    }
+    .about_boss_photo{
+        margin-top: 20px;
+
+    }
+
+    .about_boss_photo::after{
+        width: 320px;
+    }
 }

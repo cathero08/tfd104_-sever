@@ -8,15 +8,29 @@
     <link href="./css/左排欄.css" rel="stylesheet">
     <link href="./css/每頁頁尾.css" rel="stylesheet">
     <link href="./css/food.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
 
     <style>
         @keyframes runcafe{
-            0%{
+            0% {
                 transform: translateX(0%);
             }
-            100%{
-                transform: translateX(100%);
+
+            100% {
+            
+                transform: translateX(-72%);
+            }
+        }
+
+        @keyframes runcafe_1{
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+            
+                transform: translateX(-200%);
             }
         }
     </style>
@@ -27,12 +41,16 @@
 
 <body>
     <div class="cat_index">
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+        <input type="checkbox" id="putmenugod"  >
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+
         <aside class="sidenav">
             <a href="./index.html" class="left_cat_log">
                 <img src="./images/background/左側logo.png" alt="logo">
             </a>
             <a href="#" class="left_menu_log">
-                <label for="putmenugod">
+                <label for="putmenugod" >
                     <div class="left_menu_icon">
                         <span></span>
                         <span></span>
@@ -43,8 +61,12 @@
                     <p class="menu_text">
                         Menu
                     </p>
+                
+                    
                 </label>
+
             </a>
+            
 
             
             <ul class="social_icon">
@@ -55,9 +77,9 @@
 
         </aside>
 
-        <!-- 左欄的隱藏欄 -->
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
 
-        <input type="checkbox" id="putmenugod">
+        
         <section>
             
             <div class="nav_inner">
@@ -69,9 +91,10 @@
                             <a class="a_body" href="./contact.html"><li>˙聯絡我們</li></a>
                     </ul>
                     <ul><a class="a_head" href="./news.html">02 最新消息</a></ul>
-                    <ul><a class="a_head showthepage" href="./food.html">03 菜單</a></ul>
+                    <ul><a class="a_head" href="./food.html">03 菜單</a></ul>
                     <ul><a class="a_head" href="./cat.html">04 店貓資訊</a></ul>
                     <ul><a class="a_head" href="./gift.html">05 周邊商品</a></ul>
+                    <label class="menu_close" for="putmenugod">X close</label>
                     
                 </div>
                 <div class="nav_rightbg">
@@ -108,17 +131,25 @@
 
             <div class="food_bread_outside">
                 <div class="food_bread_inside">
-                    <div class="food_bread">
-                        <h2>心靈放鬆<br>
+                    <div class="food_bread" >
+                        <h2 data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">心靈放鬆<br>
                             烹飪和治療</h2>
-                        <p>料理的美味來源自於食材本身，NEKO-FFEE嚴選台灣食材，邀您一同品嚐。</p>
+                        <p data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"> 料理的美味來源自於食材本身，NEKO-FFEE嚴選台灣食材，邀您一同品嚐。</p>
                     </div>
-                    <div class="food_bread_right"><img src="./images/coffee/this-cafe-is-fantastic.jpg" alt="麵包"></div>
+                    <div class="food_bread_right" 
+                    data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500">
+                    <img src="./images/coffee/this-cafe-is-fantastic.jpg" alt="麵包"></div>
                 </div>
             </div>
 
             <div class="bread_ouu">
-                <div class="bread_inn">
+                <div class="bread_inn" data-aos="flip-down">
                     <div class="breed_title_img"><img src="./images/coffee/photo1.jpg" alt="可頌"></div>
                     <div class="breed_text">
                         <h2>法式可頌</h2>
@@ -131,7 +162,7 @@
             </div>
 
             <div class="bread_ouu">
-                <div class="bread_inn">
+                <div class="bread_inn" data-aos="flip-down">
                     <div class="breed_title_img"><img src="./images/coffee/DSC_3413.jpg" alt="鬆餅"></div>
                     <div class="breed_text">
                         <h2>Nigella 鬆餅</h2>
@@ -141,29 +172,40 @@
             </div>
 
 
-            <h2 class="food_simple">
+            <h2 class="food_simple" data-aos="zoom-in">
                 回味簡單生活，簡單不失美味。
             </h2>
 
-            <p class="food_sit">
+            <p class="food_sit" data-aos="zoom-in">
                 因爲身不由己，否則我也會到貓咪咖啡館裏坐一坐。
             </p>
 
 
 
-            <div class="coffee_side">
+            <div class="coffee_side" data-aos="zoom-out-up">
                 <div class="db-coffee">
-                    <div class="bg-coffee0">
-                        <p class="bg-coffee-on-1 grid123">經典黑咖啡Americano</p>
-                        <p class="bg-coffee-on-2 grid123"">濃縮咖啡Single Espresso</p>
-                        <p class="bg-coffee-on-3 grid123"">特調咖啡Flavored Coffee</p>
-                        <p class="bg-coffee-on-4 grid123"">卡布奇諾Cappuccino</p>
-                        <p class="bg-coffee-on-5 grid123"">經典拿鐵Latte</p>
-                        <p class="bg-coffee-on-6 grid123"">榛果拿鐵Hazelnut Latte</p>
-                        <p class="bg-coffee-on-7 grid123"">香草拿鐵Vanilla Latte</p>
-                        <p class="bg-coffee-on-8 grid123"">焦糖瑪琪朵Caramel Macchiato</p>
+                    <div class="bg-coffee0" id="grid123444">
+                        <p class="bg-coffee-on-1 grid123">經典黑咖啡Americano</a>
+                        <p class="bg-coffee-on-2 grid123">濃縮咖啡Single Espresso</p>
+                        <p class="bg-coffee-on-3 grid123">特調咖啡Flavored Coffee</p>
+                        <p class="bg-coffee-on-4 grid123">卡布奇諾Cappuccino</p>
+                        <p class="bg-coffee-on-5 grid123">經典拿鐵Latte</p>
+                        <p class="bg-coffee-on-6 grid123">榛果拿鐵Hazelnut Latte</p>
+                        <p class="bg-coffee-on-7 grid123">香草拿鐵Vanilla Latte</p>
+                        <p class="bg-coffee-on-8 grid123">焦糖瑪琪朵Caramel Macchiato</p>
 
-                        <div class="bg-coffee grid123 grid1234"" id="bg-coffeecafe"></div>
+                        
+                        
+                        <div class="bg-coffee grid123 grid1234" id="grid1234-1"><img src="./images/coffee/Americano_1.jpg"></div>
+                        <div class="bg-coffee grid123 grid1234" id="grid1234-2"><img src="./images/coffee/SingleEspresso_2.jpg"></div>
+                        <div class="bg-coffee grid123 grid1234" id="grid1234-3"><img src="./images/coffee/FlavoredCoffee_3.jpg"></div>
+                        <div class="bg-coffee grid123 grid1234" id="grid1234-4"><img src="./images/coffee/Cappuccino_4.jpg"></div>
+                        <div class="bg-coffee grid123 grid1234" id="grid1234-5"><img src="./images/coffee/Latte_5.jpg"></div>
+                        <div class="bg-coffee grid123 grid1234" id="grid1234-6"><img src="./images/coffee/HazelnutLatte_6.jpg"></div>
+                        <div class="bg-coffee grid123 grid1234" id="grid1234-7"><img src="./images/coffee/VanillaLatte_7.jpeg"></div>
+                        <div class="bg-coffee grid123 grid1234" id="grid1234-8"><img src="./images/coffee/CaramelMacchiato_8.jpg"></div>
+                        <div class="bg-coffee1 grid123 grid1234 grid1234566"></div>
+                        
                         
                         
                     </div>
@@ -172,16 +214,18 @@
             </div>
 
             <div class="run_cafe_side">
-                <div  class="run_cafe">
-                    <div class="run_cafe_innin"><img src="./images/coffee/on1.jpg" alt="cafe"></div>
-                    <div class="run_cafe_innin"><img src="./images/coffee/on2.jpg" alt="cafe"></div>
-                    <div class="run_cafe_innin"><img src="./images/coffee/on3.jpg" alt="cafe"></div>
-                    <div class="run_cafe_innin"><img src="./images/coffee/on4.jpg" alt="cafe"></div>
-                    <div class="run_cafe_innin"><img src="./images/coffee/on5.jpg" alt="cafe"></div>
-                    <div class="run_cafe_innin"><img src="./images/coffee/on6.jpg" alt="cafe"></div>
-                    <div class="run_cafe_innin"><img src="./images/coffee/on7.jpg" alt="cafe"></div>
-                    <div class="run_cafe_innin"><img src="./images/coffee/on8.jpg" alt="cafe"></div>
-                </div >
+                <div class="inside_cafe">
+                    <div  class="run_cafe">
+                        <div class="run_cafe_innin"><img src="./images/coffee/on1.jpg" alt="cafe"></div>
+                        <div class="run_cafe_innin"><img src="./images/coffee/on2.jpg" alt="cafe"></div>
+                        <div class="run_cafe_innin"><img src="./images/coffee/on3.jpg" alt="cafe"></div>
+                        <div class="run_cafe_innin"><img src="./images/coffee/on4.jpg" alt="cafe"></div>
+                        <div class="run_cafe_innin"><img src="./images/coffee/on5.jpg" alt="cafe"></div>
+                        <div class="run_cafe_innin"><img src="./images/coffee/on6.jpg" alt="cafe"></div>
+                        <div class="run_cafe_innin"><img src="./images/coffee/on7.jpg" alt="cafe"></div>
+                        <div class="run_cafe_innin"><img src="./images/coffee/on8.jpg" alt="cafe"></div>
+                    </div >
+                </div>
             </div>
 
 
@@ -229,7 +273,52 @@
         </main>
 
     </div>    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        let icon = document.getElementsByClassName("left_menu_log")[0];
+        let menu_text = document.getElementsByClassName("menu_text")[0];
+        // console.log(menu_text.innerText)
 
+        let checkboxedicon = document.getElementById("putmenugod");
+        checkboxedicon.addEventListener("click",function(){
+            if(checkboxedicon.checked){
+                icon.setAttribute("class", "left_menu_log_close");
+                menu_text.innerText = "close"
+           }else{
+                icon.setAttribute("class", "left_menu_log");
+                menu_text.innerText = "Menu"
+           }
+        })
+        
+        let cafe1 = document.getElementsByClassName("grid123");
+        let block = document.getElementById("grid123444");
+
+        let cafe11 = block.querySelectorAll(".grid1234");
+        // console.log(cafe11)
+
+
+        // console.log(cafe1[0])
+        
+
+        for(let i=0 ; i<8 ; i++){
+            cafe1[i].addEventListener("click", function(){
+                for(let a = 0; a<8 ;a++){
+                    cafe11[a].classList.remove("-out"); 
+                }
+                cafe11[i].classList.add("-out"); 
+            });
+            
+        }
+
+        
+        
+        
+
+       
+    </script>
     
 </body>
 </html>

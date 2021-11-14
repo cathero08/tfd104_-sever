@@ -3,16 +3,23 @@
 div.cat_index main div.nekoffee_since_2020{
     /* border: 1px solid red; */
     display: flex;
-    max-width: 1000px;
+    max-width: 1140px;
     margin: 174px auto 0;
     font-size: 0;
+}
+
+@media (max-width: 767.98px){
+    div.cat_index main div.nekoffee_since_2020{
+       display: flex;
+       flex-direction: column;
+    }
 }
 
 /* 左貓圖 */
 
 div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_img{
     flex: none;
-    width: 270px;
+    width: 400px;
     margin-top: 41px;
     position: relative;
 }
@@ -21,27 +28,36 @@ div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_img::before{
     background-image: url("../images/background/灰底BG.jpg");
     content: "";
     position: absolute;
-    width: 250px;
-    height: 210px;
+    width: 305px;
+    height: 290px;
     z-index: -1;
-    left: -45px;
-    top:-60px;
+    left: -27px;
+    top:-28px;
 }
 
 div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_img::after{
     content: "";
     background-image: url("../images/background/灰點.png");
     position: absolute;
-    width: 250px;
-    height: 310px;
+    width: 380px;
+    height: 333px;
     z-index: -1;
     right: -40px;
-    top: 40px;
+    top: 166px;
     background-size: 12px;
 }
 
 div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_img img{
     max-width: 100%;
+}
+
+@media (max-width: 767.98px){
+    div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_img{
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+    
 }
 
 
@@ -56,19 +72,20 @@ div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text{
 
 div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text span{
 
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bolder;
     color: #216278;
     letter-spacing: 2px;
+    line-height: 28px;
 
 }
 
 div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text p{
-    margin-top: 50px ;
+    margin: 45px 0 40px 0 ;
     font-size: 15px;
     font-weight: bold;
-    line-height: 25px;
-    width: 85%;
+    line-height: 30px;
+    letter-spacing: 1px;
     
 }
 
@@ -79,6 +96,7 @@ div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text a.nekoff
     color: black;
     position: relative;
     display: inline-block;
+    padding: 6px 10px;
     
 }
 
@@ -88,15 +106,18 @@ a.nekoffee_since_2020_button:hover{
     animation-fill-mode: both;
 }
 
+
+
 div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text a.nekoffee_since_2020_button::before{
     content: "";
     background-image: url("../images/background/灰底BG.jpg");
-    height: 5px;
-    width: 110px;
+    height: 14px;
+    width: 150px;
     position: absolute;
-    left: -3px;
+    left: -11px;
     bottom: 0px;
     z-index: -1;
+    transform: skew(-60deg, -2deg);
 
 }
 
@@ -104,14 +125,32 @@ div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text a.nekoff
     margin:0 0 3px 8px;
 
 }
+@media (max-width: 1200px){
+    div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text p{
+        padding-right: 20px ;
+    }
+}
+
+@media (max-width: 767.98px){
+    div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text{
+        margin: 50px auto 0;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
 
 /* 如果您想歡迎一隻貓 */
 
 div.cat_index main h2.if_wanttocatfamily{
-    font-size: 20px;
+    font-size: 24px;
     color: #216278;
-    max-width: 1000px;
-    margin: 80px auto ;
+    max-width: 1140px;
+    margin: 120px auto ;
     text-align: center;
     letter-spacing: 2px;
 
@@ -123,7 +162,7 @@ div.cat_index main h2.if_wanttocatfamily{
 
 div.cat_index main div.nekoffee_since_2020_2{
     display: flex;
-    max-width: 1000px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -131,10 +170,17 @@ div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text p{
     margin: 70px 100px 50px 0;
     font-size: 15px;
     font-weight: bold;
-    line-height: 25px;
+    line-height: 30px;
+    letter-spacing: 1px;
     width: 85%;
 
 
+}
+
+@media (max-width: 1200px){
+    div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text p{
+        padding-left: 20px;
+    }
 }
 
 div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text a.nekoffee_since_2020_2_button{
@@ -142,8 +188,8 @@ div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text a.ne
     font-weight: bold;
     color: black;
     position: relative;
-    margin-left: 320px;
-    margin-top: 30px;
+    margin-left: 50px;
+    margin-top: 10px;
     display: inline-block;
 }
 
@@ -161,16 +207,14 @@ a.nekoffee_since_2020_2_button:hover{
 div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text a.nekoffee_since_2020_2_button::before{
     content: "";
     background-image: url("../images/background/灰底BG.jpg");
-    height: 5px;
-    width: 120px;
-    bottom: 0;
+    height: 14px;
+    width: 180px;
+    bottom: -6px;
+    left: -30px;
     z-index: -1;
     position: absolute;
+    transform: skew(-60deg, -2deg);
 }
-
-
-
-
 
 
 div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_img {
@@ -198,12 +242,38 @@ div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_img::afte
 }
 
 
+@media (max-width: 767.98px){
+    div.cat_index main div.nekoffee_since_2020_2{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text{
+        margin-top:40px;
+    }
+    div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text p{
+        margin: auto;
+    }
+
+
+
+    div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_img img{
+        max-width: 100%;
+    
+    }
+
+}
+
+
+
+
 
 /* 領養貓咪區 */
 
 div.cat_index main h2.index_gochat_cat{
     margin: 120px auto 0;
-    width: 1000px;
+    width: 1140px;
     color: #216278;
     position: relative;
     /* text-align: center; */
@@ -220,27 +290,145 @@ div.cat_index main h2.index_gochat_cat::before{
 }
 
 
+/* 領養貓咪設定區 swiper*/
+
+.gochat_cat_swiper_ouside{
+    position: relative;
+    background-image: url("../images/background/灰底BG.jpg");
+    background-size: 100% 40% ;
+    background-repeat: repeat-x;
+    background-position: right 0 top 40px ;
+    margin-top: 50px;
+    z-index: 0;
+
+}
+
+.gochat_cat_swiper_ouside::after{
+    position: absolute;
+    background-image: url("../images/background/走路.png");
+    height: 300px;
+    width: 350px;
+    content: "";
+    right: 0%;
+    top: -150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+}
+
+.leftrghit{
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.gochat_cat_swiper_ouside label{
+    font-size: 60px;
+    position: absolute;
+    /* font-weight: bold; */
+    color: rgb(73, 113, 126);
+}
+
+.gochat_cat_swiper_ouside label:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.gochat_cat_swiper_ouside label.gochat_cat_swiper_btnprev{
+    top: 50px;
+    left: -60px;
+}
+
+.gochat_cat_swiper_ouside label.gochat_cat_swiper_btnnext{
+    right: -60px;
+    top: 50px;
+}
+
+.gochat_cat_swiper{
+    max-width: 900px;
+}
+
+.happy_cat_single_img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.happy_cat_single_img img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+}
+
+.happy_cat_single_text{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.gochat_cat_swiper a{
+    color: black;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.gochat_cat_swiper a:hover{
+    display: inline-block;
+    transition: 0.5s;
+    transform: rotate(10deg);
+}
+
+@media (max-width: 1000px){
+    .gochat_cat_swiper_ouside label.gochat_cat_swiper_btnprev{
+        top: 50px;
+        left: 0px;
+        z-index: 8;
+        /* background-color: rgba(255, 255, 255,0.5) ; */
+        border-radius: 20px;
+    }
+    
+    .gochat_cat_swiper_ouside label.gochat_cat_swiper_btnnext{
+        right: 0px;
+        top: 50px;
+        z-index: 8;
+        /* background-color: rgba(255, 255, 255,0.5) ; */
+        border-radius: 20px;
+    }
+    .gochat_cat_swiper_ouside label{
+        font-size: 60px;
+        position: absolute;
+    }
+}
+
+@media (max-width: 767.98px){
+    .gochat_cat_swiper_ouside::after{
+        display: none;
+    }
+}
 
 
 
 
-/* 領養貓咪設定區 */
+
+
+/* 領養貓咪設定區 暫不使用 看上面的swiper*/
 
 
 div.cat_index main div.happy_cat{
-    /* border: 1px solid red; */
     position: relative;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1140px;
 }
 
 div.cat_index main div.happy_cat::before{
     position: absolute;
     background-image: url("../images/background/灰底BG.jpg");
     height: 110px;
-    width: 200vw;
+    width: 200%;
     content: "";
-    z-index: -1;
+    z-index: -2;
     left: -500px;
     top: 80px;
 }
@@ -255,6 +443,7 @@ div.cat_index main div.happy_cat::after{
     top: -150px;
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: -1;
 
 
 }
@@ -265,7 +454,7 @@ div.cat_index main div.happy_cat a{
 
 
 
-/* 左右箭頭 */
+/* 左右箭頭 不使用*/
 
 div.cat_index main div.happy_cat a.happy_cat_single_left{
     position: absolute;
@@ -306,6 +495,7 @@ div.cat_index main div.happy_cat div.happy_cat_all{
     width: 850px;
     margin: 0 auto ;
     display: flex;
+    z-index: 2;
     
 }
 
@@ -325,7 +515,7 @@ div.cat_index main div.happy_cat div.happy_cat_all div.happy_cat_single:hover{
 
 
 
-/* 貓咪認養圖 */
+/* 貓咪認養圖 不使用*/
 
 div.cat_index main div.happy_cat div.happy_cat_all div.happy_cat_single div.happy_cat_single_img{
     width:180px;
@@ -359,7 +549,7 @@ div.cat_index main div.happy_cat div.happy_cat_all div.happy_cat_single ul.happy
 div.cat_index main div.index_cat_hand{
     /* border: 1px solid red; */
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1140px;
 }
 
 
@@ -371,7 +561,7 @@ div.cat_index main div.index_cat_hand h2{
     
 }
 
-div.cat_index main div.index_cat_hand h2::before{
+div.cat_index main div.index_cat_hand h2 span::before{
     content: "";
     background: url("../images/background/無文字LOGO@2x.png");
     height: 120px;
@@ -380,12 +570,13 @@ div.cat_index main div.index_cat_hand h2::before{
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
-    left: 345px;
+    /* left: 415px; */
     top: -95px;   
+    transform: translatex(-177px);
 
 }
 
-div.cat_index main div.index_cat_hand h2::after{
+div.cat_index main div.index_cat_hand h2 span::after{
     content: "";
     background: url("../images/background/貓手.png");
     height: 175px;
@@ -394,7 +585,7 @@ div.cat_index main div.index_cat_hand h2::after{
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
-    left: 510px;
+    /* left: 580px; */
     top: -150px;
 
 }
@@ -404,7 +595,7 @@ div.cat_index main div.index_cat_hand h2::after{
 
 
 div.cat_index main div.grid{
-    max-width: 1000px;
+    max-width: 1140px;
     margin: 20px auto 0;
     /* border: 1px solid red; */
 
@@ -443,6 +634,32 @@ div.cat_index main div.grid_cat_container a.-item9{
 }
 
 
+@media (max-width: 767.98px){
+    div.cat_index main div.grid_cat_container{
+        display: grid;
+        grid-template-columns: auto auto auto  ;
+        grid-template-rows: 140px 140px 140px ;
+        gap:20px;    
+    }
+    div.cat_index main div.grid_cat_container a.-item1{
+        grid-area: auto;
+    }
+    
+    div.cat_index main div.grid_cat_container a.-item9{
+        grid-area: auto;
+    }
+}
+
+@media (max-width: 413.98px){
+    div.cat_index main div.grid_cat_container{
+        display: grid;
+        grid-template-columns: auto auto   ;
+        grid-template-rows: 140px 140px 140px 140px 140px;
+        gap:10px;    
+    }
+}
+
+
 
 /* 字區 */
 
@@ -463,13 +680,13 @@ div.cat_index main div.grid_cat_container a p{
 }
 
 div.cat_index main div.grid_cat_container a:hover p{
-    transform: scale(1.2);
+    transform: scale(1.12);
     transition-duration: 0.5s;
     opacity: 1;
 }
 
 div.cat_index main div.grid_cat_container a.grid_cat_items:hover {
-    transform: scale(1.2);
+    transform: scale(1.12);
     transition-duration: 0.5s;
     
 
@@ -480,7 +697,7 @@ div.cat_index main div.grid_cat_container a.grid_cat_items:hover {
 
 div.cat_index main div.footcat{
     background-image: url("../images/background/sleepcat.jpg");
-    width: 100vw;
+    width: 100%;
     height: 450px;
     background-repeat: no-repeat;
     background-size: cover;

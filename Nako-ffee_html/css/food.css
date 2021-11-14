@@ -11,7 +11,6 @@
 
 
 h1.food_boss{
-    /* width: 1000px; */
     margin: 70px auto 140px;
     text-align: center;
     color: #216278;
@@ -30,7 +29,7 @@ h1.food_boss{
 .food_bread_outside{
     display: flex;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1140px;
     margin: 400px auto 15px;
 }
 
@@ -38,6 +37,8 @@ h1.food_boss{
 .food_bread_inside{
     display: flex;
 }
+
+
 
 
 .food_bread{
@@ -59,7 +60,7 @@ h1.food_boss{
     letter-spacing: 1px;
     font-size: 20px;
     font-weight: bold;
-    color: #c4c4c4;
+    color: #666;
 }
 
 .food_bread_right{
@@ -78,7 +79,6 @@ h1.food_boss{
 
 }
 
-
 .food_bread_right::before{
     width: 100%;
     height: 110%;
@@ -89,6 +89,40 @@ h1.food_boss{
     top: -210px;
     left: 123px;
 }
+
+
+@media (max-width: 767.98px){
+    .food_bread_inside{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .food_bread_right{
+        width: 100%;
+        max-width: 550px;
+        height: auto;
+    }
+    .food_bread_right::before{
+        width: 100%;
+        /* height: 60%; */
+        background-color: rgba(250, 161, 157, 0.4);
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: -110px;
+        left: 50px;
+    }
+    
+}
+
+@media (max-width: 413.98px){
+    .food_bread_right::before{
+        height: 60%;
+    }
+}
+
+
+
 
 
 /* 可頌 */
@@ -111,7 +145,6 @@ h1.food_boss{
 }
 
 .breed_title_img{
-    /* min-width: 330px; */
     height: 300px;
     flex-basis: 330px;
     margin-left: 110px;
@@ -159,8 +192,49 @@ p.food_sit{
     letter-spacing: 1.4px;
     font-size: 20px;
     font-weight: bold;
-    color: #c4c4c4;
+    color: #666;
     margin:0 0 40px 0 ;
+}
+
+@media (max-width: 1200px){
+    .bread_inn{
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        margin: 0 auto;
+        background-color: #FAA19D;
+    }
+   
+}
+@media (max-width: 767.98px){
+    .bread_inn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+        background-color: #FAA19D;
+    }
+    .breed_title_img{
+        height: 400px;
+        margin-left: 0px;
+        flex-shrink: 0;
+        padding: 15px 0;
+    }
+    
+    .breed_text h2{
+        color: white;
+        margin-top: 20px;
+    
+    }
+    
+    .breed_text p{
+        color: white;
+        font-size: 15px;
+        margin-top: 30px;
+        max-width: 484px;
+    }
 }
 
 
@@ -179,16 +253,10 @@ p.food_sit{
     z-index: 0;
 }
 
-
-
 .db-coffee{
     display: inline-block;
     
-    
 }
-
-
-
 
 .bg-coffee0{
     margin: 50px;
@@ -198,7 +266,6 @@ p.food_sit{
     column-gap: 60px;    
     /* row-gap: 15px; */
 }
-
 
 .grid1234{
     grid-area: 1 / 2 / 9 / 3;
@@ -218,6 +285,7 @@ p.food_sit{
     color: white;
     
 }
+
 
 /* 瘋狂hover */
 
@@ -249,24 +317,28 @@ p.bg-coffee-on-8:hover ~ .bg-coffee{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.bg-coffee{
+.grid1234566{
     background-image: url("../images/coffee/AdobeStock_267568050.jpg");
     width: 340px;
     height: 330px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    margin: 60px 0 10px 0;
+    display: inline-block;
+    top: -10px;
+    position: relative;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.bg-coffee{
+    /* background-image: url("../images/coffee/AdobeStock_267568050.jpg"); */
+    width: 340px;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     margin: 60px 0 10px 0;
     display: inline-block;
     top: -10px;
@@ -274,7 +346,16 @@ p.bg-coffee-on-8:hover ~ .bg-coffee{
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
+.bg-coffee img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
 
+.-out img{
+    opacity: 1;
+}
 
 .bg-coffee::before{
     background-color: #216278;
@@ -294,8 +375,28 @@ p.bg-coffee-on-8:hover ~ .bg-coffee{
 }
 
 
+@media (max-width: 1200px){
+    .grid123{
+        word-break: keep-all;
+    }
+    .coffee_side{
+        width: 95%;
+    }
+}
 
-
+@media (max-width: 767.98px){
+    .bg-coffee0{
+        margin: 50px;
+        display: grid;
+        grid-template-columns: auto ;
+        vertical-align: top;
+        column-gap: 60px;    
+        /* row-gap: 15px; */
+    }
+    .grid1234{
+        grid-area: 9 / 1 / 10 / 2;
+    }
+}
 
 
 
@@ -306,13 +407,10 @@ p.bg-coffee-on-8:hover ~ .bg-coffee{
 .run_cafe_side{
     /* background: #c4c4c4; */
     background-image: url("../images/background/灰底BG.jpg");
-    /* max-width: 1250px; */
-    width: 90%;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
     margin: 50px auto  100px ;
-    
-    /* overflow: hidden; */
     position: relative;
     
 }
@@ -321,7 +419,7 @@ p.bg-coffee-on-8:hover ~ .bg-coffee{
     content: "Latte art";
     font-size: 30px;
     width: 200px;
-    position: absolute;
+    position: absolute; 
     bottom: -17px;
     left: 100px;
 }
@@ -338,30 +436,48 @@ p.bg-coffee-on-8:hover ~ .bg-coffee{
     position: absolute;
 }
 
+
+.inside_cafe{
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    top: 40px;
+    /* left: 20px; */
+    margin-left: 20px;
+}
+
+
 .run_cafe{
     display: flex;
-    margin: 30px 20px;
-    max-width: 1200px;
-    overflow: hidden;
+    
+    /* max-width: 100%; */
+    /* overflow: hidden; */
+    animation: runcafe 60s  linear infinite;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
 }
+
 
 
 .run_cafe_innin{
     display: flex;
     width: 240px;
-    height: 230px;
+    height: 220px;
     padding: 0px;
     flex-shrink: 0;
+    transform: translate3d(0, 0, 0);
 
-    /* animation: runcafe;
-    animation-duration: 10s;
-    animation-iteration-count: infinite; */
+    
 }
 
 .run_cafe_innin img{
     object-fit: cover;
     width: 100%;
 }
+
 
 
 

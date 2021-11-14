@@ -20,12 +20,16 @@
 <body>
 
     <div class="cat_index">
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+        <input type="checkbox" id="putmenugod"  >
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+
         <aside class="sidenav">
             <a href="./index.html" class="left_cat_log">
                 <img src="./images/background/左側logo.png" alt="logo">
             </a>
             <a href="#" class="left_menu_log">
-                <label for="putmenugod">
+                <label for="putmenugod" >
                     <div class="left_menu_icon">
                         <span></span>
                         <span></span>
@@ -36,8 +40,12 @@
                     <p class="menu_text">
                         Menu
                     </p>
+                
+                    
                 </label>
+
             </a>
+            
 
             
             <ul class="social_icon">
@@ -48,9 +56,9 @@
 
         </aside>
 
-        <!-- 左欄的隱藏欄 -->
+        <!-- 左欄的隱藏欄 ------------------------------------------------------------->
 
-        <input type="checkbox" id="putmenugod">
+        
         <section>
             
             <div class="nav_inner">
@@ -64,7 +72,8 @@
                     <ul><a class="a_head" href="./news.html">02 最新消息</a></ul>
                     <ul><a class="a_head" href="./food.html">03 菜單</a></ul>
                     <ul><a class="a_head" href="./cat.html">04 店貓資訊</a></ul>
-                    <ul><a class="a_head showthepage" href="./gift.html">05 周邊商品</a></ul>
+                    <ul><a class="a_head" href="./gift.html">05 周邊商品</a></ul>
+                    <label class="menu_close" for="putmenugod">X close</label>
                     
                 </div>
                 <div class="nav_rightbg">
@@ -111,7 +120,7 @@
 
             <div class="gift_grid">
                 <div class="gift_frid_items">
-                    <div class="gift_frid_items_img">
+                    <div class="gift_frid_items_img sale">
                         <img src="./images/貓咪周邊/20211015112730.jpg">
                     </div>
                     <ul>
@@ -124,7 +133,7 @@
                     </ul>
                 </div>
                 <div class="gift_frid_items">
-                    <div class="gift_frid_items_img">
+                    <div class="gift_frid_items_img sale">
                         <img src="./images/貓咪周邊/20211015112730.jpg">
                     </div>
                     <ul>
@@ -137,7 +146,7 @@
                     </ul>
                 </div>
                 <div class="gift_frid_items">
-                    <div class="gift_frid_items_img">
+                    <div class="gift_frid_items_img sale">
                         <img src="./images/貓咪周邊/20211015112730.jpg">
                     </div>
                     <ul>
@@ -326,6 +335,25 @@
             <p class="footer_tibame">本網站為緯育TibaMe前端工程師專業技術養成班第72期學員專題作品，本平台僅供學習、展示之用。參考資源:neco republic。若有侵權疑慮，您可以私訊<a href="https://www.facebook.com/TibaMe/" target="_blank">[緯育TibaMe]</a>，後續會由專人協助處理
             </p>
         </main>
+
+        <script>
+            let icon = document.getElementsByClassName("left_menu_log")[0];
+            let menu_text = document.getElementsByClassName("menu_text")[0];
+            // console.log(menu_text.innerText)
+
+            let checkboxedicon = document.getElementById("putmenugod");
+            checkboxedicon.addEventListener("click",function(){
+                if(checkboxedicon.checked){
+                    icon.setAttribute("class", "left_menu_log_close");
+                    menu_text.innerText = "close"
+               }else{
+                    icon.setAttribute("class", "left_menu_log");
+                    menu_text.innerText = "Menu"
+               }
+            })
+            
+           
+        </script>
     
 </body>
 </html>

@@ -2,8 +2,8 @@
 
 div.cat_index main div.information{
     /* border: 1px solid red; */
-    max-width: 970px;
-    margin: 90px auto 200px;
+    max-width: 1060px;
+    margin: 90px auto ;
 }
 
 div.cat_index main div.information div.information_head{
@@ -11,47 +11,46 @@ div.cat_index main div.information div.information_head{
      color: #216278;
      font-weight: bolder;
      font-size: 28px;
+     margin-bottom: 60px;
+     margin-left: 30px;
      
 }
 
-div.cat_index main div.information div.information_side{
-     /* border: 1px solid blue; */
-     margin-top: 50px;
-
-
-}
- 
-div.cat_index main div.information div.information_inner{
-     /* border: 1px solid red; */
-     display: flex;
-     overflow: hidden;
-     
+div.swiper-horizontal>.swiper-scrollbar{
+     height: 2px;
 }
 
-div.cat_index main div.information div.information_item{
-     width: 350px;
-     margin-right: 70px;
-     flex-shrink: 0;
-     border-bottom:1px solid rgba(0, 0, 0, 0.5) ;
+
+.information_swiper{
+     max-width: 1060px;
+     /* height: 300px; */
 }
 
-div.cat_index main div.information div.information_item:hover{
-     box-shadow: 0 2px 0px rgba(0, 0, 0, 1);
+.information_swiper-slide:hover{
      cursor: pointer;
 }
 
-div.cat_index main div.information div.information_item span{
+.information_swiper-slide a{
+     color: black;
+}
+
+.information_swiper-slide span{
+     font-size: 14px;
+}
+
+.information_swiper-slidee p{
      font-size: 15px;
 }
 
-div.cat_index main div.information div.information_item p{
-     margin : 13px 0 0 0 ;
+.information_swiper-slide p:nth-child(3){
      font-size: 14px;
-     font-weight: bold;
+     color: #8d8c8c;
+
 }
 
-div.cat_index main div.information div.information_item p:nth-child(3){
-    font-size: 13px;
-    color: #b1b1b1;
-    font-weight: normal;
+
+@media (max-width: 1200px){
+     div.cat_index main div.information{
+          padding: 0 20px ;
+     }
 }

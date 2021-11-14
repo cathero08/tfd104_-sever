@@ -11,6 +11,8 @@
         <link href="./css/最新消息欄.css" rel="stylesheet">
         <link href="./css/關於since2020區.css" rel="stylesheet">
         <link href="./css/每頁頁尾.css" rel="stylesheet">
+        <link href="./css/swiper-bundle.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <style>
 
             main{
@@ -54,7 +56,7 @@
                 0%{
                     transform: rotate(0deg);
                 }
-
+                
                 100%{
                     transform: rotate(-5deg);
                 }
@@ -69,6 +71,21 @@
                     opacity: 0.5;
                 }
             }
+
+            @keyframes roundcat {
+            10% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 0;
+            }
+        }
+            
             
 
             
@@ -81,12 +98,16 @@
     
     <body>
         <div class="cat_index">
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+            <input type="checkbox" id="putmenugod"  >
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
+
             <aside class="sidenav">
                 <a href="./index.html" class="left_cat_log">
                     <img src="./images/background/左側logo.png" alt="logo">
                 </a>
                 <a href="#" class="left_menu_log">
-                    <label for="putmenugod">
+                    <label for="putmenugod" >
                         <div class="left_menu_icon">
                             <span></span>
                             <span></span>
@@ -97,8 +118,12 @@
                         <p class="menu_text">
                             Menu
                         </p>
+                    
+                        
                     </label>
+
                 </a>
+                
 
                 
                 <ul class="social_icon">
@@ -109,9 +134,9 @@
 
             </aside>
 
-            <!-- 左欄的隱藏欄 -->
+            <!-- 左欄的隱藏欄 ------------------------------------------------------------->
 
-            <input type="checkbox" id="putmenugod">
+            
             <section>
                 
                 <div class="nav_inner">
@@ -126,6 +151,7 @@
                         <ul><a class="a_head" href="./food.html">03 菜單</a></ul>
                         <ul><a class="a_head" href="./cat.html">04 店貓資訊</a></ul>
                         <ul><a class="a_head" href="./gift.html">05 周邊商品</a></ul>
+                        <label class="menu_close" for="putmenugod">X close</label>
                         
                     </div>
                     <div class="nav_rightbg">
@@ -159,6 +185,11 @@
                     <div class="index_runcat_text">
                         <img src="./images/background/首頁大標字3x.png" alt="大標字" style="z-index:unset;">
                     </div>    
+
+                    <div class="index_runcar_bigbigbig">
+                        <div class="index_runcar_bigbigbig_img"><img src="./images/background/首頁輪播貓.png"></div>
+                        <div class="index_runcar_bigbigbig_img"><img src="./images/background/FU75ol.jpg"></div>
+                    </div>
                     
                     <div class="index_runcat_news">
                         <span>NEW!!</span>
@@ -166,58 +197,80 @@
                     </div>
 
                     <div class="index_runcat_news_right">
-                        <a href="./gift.html"><p>推出24款必敗超萌黑貓周邊商品～必收黑貓馬克杯!</p></a>
+                        <a href="./gift.html" target="_blank" ><p>推出24款必敗超萌黑貓周邊商品～必收黑貓馬克杯!</p></a>
                     </div>
 
-                    <div class="index_runcat_news_item"><a href="./gift.html"><img src="./images/貓咪周邊/黑貓公爵馬克杯-首頁.jpg" alt="cup"></a>
+                    <div class="index_runcat_news_item"><a href="./gift.html" target="_blank"><img src="./images/貓咪周邊/黑貓公爵馬克杯-首頁.jpg" alt="cup"></a>
                     </div>
 
                 </div>
 
-                <div class="information">
+                <div class="information" data-aos="fade-right">
                     <div class="information_head">
                     INFORMATION
                     </div>
 
-                    <div class="information_side">
-                        
-                        <div class="information_inner">
-                            
-                            <div class="information_item">
-                                <span>2021.10.15</span>
-                                <p>到哪裡也和暖暖的喵咪在一起</p>
-                                <p>與漫畫家山野玲玲合作 ! 佈滿貓咪的抓毛絨外套 ~ .....</p>
-                            </div>
-
-                            <div class="information_item">
-                                <span>2021.10.15</span>
-                                <p>倒水的瞬間……會心一笑♪看著魚的貓咪好可愛</p>
-                                <p>好想吃魚～　像是在水族館盯著魚缸的貓咪玻璃杯之會 .....</p>
-                            </div>
-
-                            <div class="information_item">
-                                <span>2021.10.15</span>
-                                <p>由天然材料製成的耐熱玻璃 x 時尚</p>
-                                <p>am & be HARIO 咖啡服務器 400 橄欖木 .....</p>
-                            </div>
-
+                    <div class="swiper information_swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide information_swiper-slide">
+                            <a href="./news.html">
+                            <span>2021.10.15</span>
+                            <p>到哪裡也和暖暖的喵咪在一起</p>
+                            <p>漫畫家 Rinrin Yamano 的貓臉插圖以完整圖案印刷。這是一種易於穿著的設計，具有沉穩的色彩，同時吸引了愛貓人士。羅紋袖子可以輕鬆地捲起手臂，寬鬆的款式推薦給喜歡貓的男孩。</p>
+                            </a>
                         </div>
 
-                    </div>
+                          <div class="swiper-slide information_swiper-slide">
+                            <a href="./news.html">
+                            <span>2021.10.15</span>
+                            <p>化妝包總是和太可愛的龍馬在一起</p>
+                            <p>每次化妝都覺得很可愛♪
+                                期待已久的龍馬君粉絲們！可愛的臉現在是化妝包。敞開心扉，把體積大的化妝品放在一起。可愛性和實用性一定會超出您的期望！</p>
+                            </a>    
+                        </div>
+
+                          <div class="swiper-slide information_swiper-slide">
+                            <a href="./news.html">
+                            <span>2021.10.17</span>
+                            <p>秘密信息，由貓傳遞</p>
+                            <p>沿著引導線折疊後變成貓臉的留言卡套裝。如果你拉開耳朵，打開它，你可以閱讀裡面的信息。設置了很多4種x 7件，我認為所有種類都會被收集和排列。有些貓和我的孩子一樣！</p>
+                            </a> 
+                        </div>
+
+                          <div class="swiper-slide information_swiper-slide">
+                            <a href="./news.html">
+                            <span>2021.10.19</span>
+                            <p>“Cat Hatago”是世界上第一個與貓咖啡館相鄰的床位</p>
+                            <p>您可以在那裡看貓或看貓入睡。請在以江戶時代為靈感的日本空間中度過悠閒的看貓時光...... 受保護的貓咖啡館關閉後，您可以體驗到22:00的照顧。</p>
+                            </a> 
+                        </div>
+
+                          <div class="swiper-slide information_swiper-slide">
+                            <a href="./news.html">
+                            <span>2021.10.20</span>
+                            <p>如果你有一隻受保護的貓</p>
+                            <p>幸運地把你的腳放在一盆溫水中並懇求一個擁抱，你可以擁抱它，慢慢地溫暖你的身體。</p>
+                            </a> 
+                        </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-scrollbar"></div>
+                      </div>
                 </div>
 
                 <div class="nekoffee_since_2020">
-                    <div class="nekoffee_since_2020_img">
+                    <div class="nekoffee_since_2020_img" data-aos="fade-right">
                         <img src="./images/background/首頁關於貓.jpeg" alt="cat">
                     </div>
-                    <div class="nekoffee_since_2020_text">
+                    <div class="nekoffee_since_2020_text" data-aos="fade-up">
                         <span>關於NEKO-FFEE<br>
                             Since  2020
                         </span>
                         <p>日文中的貓為「猫（ねこ、neko）」，據說是古時候日本人稱之「ネズミを捕る子（Nezumi-o-toru-ko、捕鼠者）」，取前後的發音而拼成「ネ（ne）」與「子（ko）」。
                             貓咪咖啡館（Cat cafe）是指主要以貓咪為主題的咖啡館。那裡沒有工作時的疲憊和焦慮，沒有學習時的緊張和辛苦，因為在貓咪面前，所有的煩惱和孤獨感都會雲消霧散。貓咖啡館是2000年以後在日本興起的喝咖啡場所，在經濟危機的時候，日本民眾有自己的方式減壓，比如去時下流行的貓咖啡館 NEKO-FFEE，與貓同樂。
                         </p>
-                        <a class="nekoffee_since_2020_button" href="./about.html">
+                        <a class="nekoffee_since_2020_button" href="./about.html" target="_blank">
                             我們的品牌故事<img src="./images/background/箭頭右.png">
                         </a>
 
@@ -225,14 +278,14 @@
                 </div>
 
 
-                <h2 class="if_wanttocatfamily">如果您想歡迎一隻貓加入您的家人，請從受保護的貓而不是寵物店開始</h2>
+                <h2 class="if_wanttocatfamily" data-aos="fade-up" data-aos-duration="3000">如果您想歡迎一隻貓加入您的家人，請從受保護的貓而不是寵物店開始</h2>
                 
-                <div class="nekoffee_since_2020_2">
+                <div class="nekoffee_since_2020_2" data-aos="fade-up" data-aos-duration="3000">
                     <div class="nekoffee_since_2020_2_text">
                         <p>心理層面上，最明顯的例子是當我們看到心愛的寵物時，第一反應往往是忍不住地發出讚嘆：「啊！好可愛！」，此時嘴角也不禁往上揚。之所以會產生這樣的情況，是因為我們的體內在與寵物互動之時，會影響六種神經傳導物質的分泌：苯乙胺、腦內嗎啡、多巴胺、催產素、泌乳激素、腎上腺皮質素，前五種神經傳導物質的增加，會帶給人歡愉、幸福及安全感，而腎上腺皮質素的減少，能降低人的緊張焦慮感，這些神經傳導物質的改變，致使我們與寵物相處時產生幸福感。
                         </p>
 
-                        <a href="./food.html" class="nekoffee_since_2020_2_button">
+                        <a href="./food.html" class="nekoffee_since_2020_2_button" target="_blank">
                             搭配咖啡更開心~~<img src="./images/background/箭頭右.png">
                         </a>
                     </div>
@@ -243,76 +296,90 @@
 
                 </div>
 
-                <h2 class="index_gochat_cat">領養快樂貓咪</h2>
+                <h2 class="index_gochat_cat" data-aos="fade-up" data-aos-duration="3000">領養快樂貓咪</h2>
+
                 
-                <div class="happy_cat">
-                    <div class="happy_cat_all">
-                        <div class="happy_cat_single">
-                            <a href="./gocha.html">
-                            <div class="happy_cat_single_img"><img src="./images/cathold/板橋/毛色白底虎斑體型小型.jpg" ></div>
-                            <ul class="happy_cat_single_text">
-                                <li>板橋動物之家/</li>                                                                        </li>
-                                <li>年齡幼/<li>
-                                <li>短毛/</li>
-                                <li>白底虎班/</li>
-                            </ul>
-                            </a>
-                        </div>
-                        <div class="happy_cat_single">
-                            <a href="#">
+                <div class="gochat_cat_swiper_ouside" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="leftrghit">
+                        <div class="swiper gochat_cat_swiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide gochat_cat_swiper"><a href="./gocha.html" target="_blank">
+                                <div class="happy_cat_single_img"><img src="./images/cathold/板橋/毛色白底虎斑體型小型.jpg" ></div>
+                                <ul class="happy_cat_single_text">
+                                    <li>板橋動物之家/</li>                                                                      
+                                    <li>年齡幼/<li>
+                                    <li>短毛/</li>
+                                    <li>白底虎班/</li>
+                                </ul>
+                            </a></div>
+
+                            <div class="swiper-slide gochat_cat_swiper"><a href="./gocha.html" target="_blank">
                                 <div class="happy_cat_single_img"><img src="./images/cathold/板橋/毛色白底虎斑體型小型2.jpg" ></div>
                                 <ul class="happy_cat_single_text">
-                                    <li>板橋動物之家/</li>                                                                        </li>
+                                    <li>板橋動物之家/</li>                                                                     
                                     <li>年齡幼/<li>
                                     <li>短毛/</li>
                                     <li>白底虎班/</li>
                                 </ul>
-                            </a>
-                        </div>
-                        <div class="happy_cat_single">
-                            <a href="#">
+                            </a></div>
+
+                            <div class="swiper-slide gochat_cat_swiper"><a href="./gocha.html" target="_blank">
                                 <div class="happy_cat_single_img"><img src="./images/cathold/板橋/毛色白底虎斑體型小型3.jpg" ></div>
                                 <ul class="happy_cat_single_text">
-                                <li>板橋動物之家/</li>                                                                        </li>
+                                <li>板橋動物之家/</li>                                                                     
                                 <li>年齡幼/<li>
                                 <li>短毛/</li>
                                 <li>白底虎班/</li>
                                 </ul>
-                            </a>
-                        </div>
-                        <div class="happy_cat_single">
-                            <a href="#">
+                            </a></div>
+
+                            <div class="swiper-slide gochat_cat_swiper"><a href="./gocha.html" target="_blank">
                                 <div class="happy_cat_single_img"><img src="./images/cathold/板橋/毛色白底虎斑體型小型4.jpg" ></div>
                                 <ul class="happy_cat_single_text">
-                                    <li>板橋動物之家/</li>                                                                        </li>
+                                    <li>板橋動物之家/</li>                                                                     
                                     <li>年齡幼/<li>
                                     <li>短毛/</li>
                                     <li>白底虎班/</li>
                                 </ul>
-                            </a>
-                        </div>
-                        <a href="#" class="happy_cat_single_left" ><img src="./images/background/左大箭頭2.png"></a>
-                        <a href="http://www.yahoo.com.tw" class="happy_cat_single_right" ><img src="./images/background/右大箭頭2.png"></a>
+                            </a></div>
 
+                            <div class="swiper-slide gochat_cat_swiper"><a href="./gocha.html" target="_blank">
+                                <div class="happy_cat_single_img"><img src="./images/cathold/板橋/毛色白底虎斑體型小型5.jpg" ></div>
+                                        <ul class="happy_cat_single_text">
+                                            <li>板橋動物之家/</li>                                                                       
+                                            <li>年齡幼/<li>
+                                            <li>短毛/</li>
+                                            <li>白底虎班/</li>
+                                        </ul>
+                                    </a></div>
+                            </div>
+                            
+                            
+                        </div>    
+                        <label class="gochat_cat_swiper_btnprev">◁</label>
+                        <label class="gochat_cat_swiper_btnnext">▷</label>
                     </div>
-                        
-                </div >
+                    
+                </div>    
                 
                 <div class="index_cat_hand">
-                    <h2>･ω･</h2>
+                    <h2>
+                        ･ω･
+                        <span></span>
+                    </h2>
                 </div>
 
-                <div class="grid">
+                <div class="grid" data-aos="fade-up" data-aos-duration="3000">
                     <div class="grid_cat_container">
-                        <a href="./about.html" class="grid_cat_items -item1"><img src="./images/background/cat1.jpg" alt="1"><p>聽聽貓咪所發出的“咕嚕”聲<br>讓人的情緒精神放鬆的好方法</p></a>
-                        <a href="./gocha.html" class="grid_cat_items"><p>作為一位專業貓奴</p><img src="./images/background/cat2.jpeg" alt="2"></a>
-                        <a href="./gift.html" class="grid_cat_items"><img src="./images/coffee/coffee3.jpg" alt="3"><p>好東西要與好朋友分享</p></a>
-                        <a href="./food.html" class="grid_cat_items"><img src="./images/shop/shop4.jpg" alt="4"><p>與漫畫家山野玲玲合作</p></a>
-                        <a href="./gocha.html" class="grid_cat_items"><img src="./images/background/cat5.jpg" alt="5"><p>照顧一隻貓咪</p></a>
-                        <a href="./gift.html" class="grid_cat_items -item6"><img src="./images/shop/shop6.jpg" alt="6"><p>最愛貓咪T恤 色彩繽紛</p></a>
-                        <a href="./food.html" class="grid_cat_items"><img src="./images/coffee/coffee8.jpg" alt="7"><p>片刻的寧靜 就是如此簡單</p></a>
-                        <a href="./gocha.html" class="grid_cat_items"><img src="./images/cathold/板橋/毛色黑白色體型小型.jpg"><p>擁有只屬於自己的貓咪</p></a>
-                        <a href="./cat.html" class="grid_cat_items -item9"><img src="./images/background/cat9.jpeg" alt="9"><p>撫摸貓咪的脖子和耳後部位<br>貓咪感到舒服開心了就會發出“咕嚕”聲</p></a>
+                        <a href="./about.html" target="_blank" class="grid_cat_items -item1"><img src="./images/background/cat1.jpg" alt="1"><p>聽聽貓咪所發出的“咕嚕”聲<br>讓人的情緒精神放鬆的好方法</p></a>
+                        <a href="./gocha.html" target="_blank" class="grid_cat_items"><p>作為一位專業貓奴</p><img src="./images/background/cat2.jpeg" alt="2"></a>
+                        <a href="./food.html" target="_blank" class="grid_cat_items"><img src="./images/coffee/coffee3.jpg" alt="3"><p>好東西要與好朋友分享</p></a>
+                        <a href="./gift.html" target="_blank" class="grid_cat_items"><img src="./images/shop/shop4.jpg" alt="4"><p>與漫畫家山野玲玲合作</p></a>
+                        <a href="./gocha.html" target="_blank" class="grid_cat_items"><img src="./images/background/cat5.jpg" alt="5"><p>照顧一隻貓咪</p></a>
+                        <a href="./gift.html" target="_blank" class="grid_cat_items -item6"><img src="./images/shop/shop6.jpg" alt="6"><p>最愛貓咪T恤 色彩繽紛</p></a>
+                        <a href="./food.html" target="_blank" class="grid_cat_items"><img src="./images/coffee/coffee8.jpg" alt="7"><p>片刻的寧靜 就是如此簡單</p></a>
+                        <a href="./gocha.html" target="_blank" class="grid_cat_items"><img src="./images/cathold/板橋/毛色黑白色體型小型.jpg"><p>擁有只屬於自己的貓咪</p></a>
+                        <a href="./cat.html" target="_blank" class="grid_cat_items -item9"><img src="./images/background/cat9.jpeg" alt="9"><p>撫摸貓咪的脖子和耳後部位<br>貓咪感到舒服開心了就會發出“咕嚕”聲</p></a>
                     </div>
                    
                 </div>
@@ -352,6 +419,90 @@
         
             </main>
         </div>
+
+
+
+        <script src="./js/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script> AOS.init(); </script>
+        <script>
+            var swiper = new Swiper(" .information_swiper", {
+              slidesPerView: 2.5,
+              spaceBetween: 60,
+              freeMode: true,
+
+              scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+                },
+              breakpoints: {
+                1: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                720: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                960: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 60,
+                },
+               }
+            });
+
+            var mySwiper = new Swiper(" .gochat_cat_swiper", {
+              slidesPerView: 4,
+              spaceBetween: 25,
+              freeMode: true,
+              loop: true,
+
+              navigation: {
+                nextEl: ".gochat_cat_swiper_btnnext",
+                prevEl: ".gochat_cat_swiper_btnprev",
+                },
+              breakpoints: {
+                1: {
+                    slidesPerView: 2,
+                    centeredSlides: false,
+                    spaceBetween: 10,
+                },
+                520: {
+                    slidesPerView: 3,
+                    centeredSlides: false,
+                    spaceBetween: 10,
+                },
+                720: {
+                    slidesPerView: 4,
+                    centeredSlides: false,
+                    spaceBetween: 10,
+                },
+                960: {
+                    slidesPerView: 4,
+                    spaceBetween: 25,
+                    centeredSlides: false,
+              },
+            }
+            });
+        </script>
+        <script>
+            let icon = document.getElementsByClassName("left_menu_log")[0];
+            let menu_text = document.getElementsByClassName("menu_text")[0];
+            // console.log(menu_text.innerText)
+
+            let checkboxedicon = document.getElementById("putmenugod");
+            checkboxedicon.addEventListener("click",function(){
+                if(checkboxedicon.checked){
+                    icon.setAttribute("class", "left_menu_log_close");
+                    menu_text.innerText = "close"
+               }else{
+                    icon.setAttribute("class", "left_menu_log");
+                    menu_text.innerText = "Menu"
+               }
+            })
+            
+           
+        </script>
 
     </body>
 </html>
