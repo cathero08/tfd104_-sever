@@ -343,12 +343,18 @@ section{
 }
 
 .nav_inner .nav_left{
-    display:flex ;
+    /* display:flex ;
     flex-direction: column;
     
     padding: 10% 8% 10% 20%;
     flex-grow: 1 ;
+    position: relative; */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     position: relative;
+    align-items: center;
+    justify-content: center;
     
 }
 
