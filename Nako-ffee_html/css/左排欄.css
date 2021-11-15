@@ -187,7 +187,7 @@ div aside.sidenav a.left_menu_log_close div.left_menu_icon span:nth-child(1){
 }
 div aside.sidenav a.left_menu_log_close div.left_menu_icon span:nth-child(2){
     background-color: #FAA19D;
-    height: 3px;
+    height: 4px;
     width: 100%;
     transform: rotate(45deg);
     margin-bottom:6px;
@@ -309,7 +309,7 @@ section{
     font-weight: bold;
     letter-spacing: 1px;
     color: black;
-    padding: 6px 8px;
+    padding: 8px 12px;
     margin: 0 0 55px 0;
     /* border: 1px solid black; */
     
@@ -332,7 +332,7 @@ section{
     font-weight: normal;
     margin: 20px 0 5px 100px;
     width: 120px;
-    padding: 6px 8px;
+    padding: 8px 12px;
     
 }
 
@@ -342,19 +342,61 @@ section{
 
 }
 
-.nav_inner .nav_left{
-    /* display:flex ;
-    flex-direction: column;
-    
-    padding: 10% 8% 10% 20%;
-    flex-grow: 1 ;
-    position: relative; */
+/* =============================================test============================================ */
+
+.testnav{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     position: relative;
     align-items: center;
     justify-content: center;
+}
+
+.testnav2{
+    color: #FAA19D;
+    border-bottom: 2px solid #FAA19D ;
+    display: inline-block;
+    vertical-align: top;
+}
+.testnav22{
+    color: #FAA19D;
+    display: inline-block;
+    vertical-align: top;
+}
+/* .testnav2:hover{
+    color: white;
+}
+.testnav22:hover{
+    color: white;
+} */
+.nav_inner .a_head:hover .testnav2{
+    background-color: #FAA19D;
+    color: white;
+    border-bottom: 2px solid white ;
+}
+
+.nav_inner .a_body li:hover .testnav22{
+    background-color: #FAA19D;
+    color: white;
+
+}
+/* =============================================test============================================ */
+.nav_inner .nav_left{
+    /* display:flex ;
+    flex-direction: column;
+    
+    
+    flex-grow: 1 ;
+    position: relative; */
+    /* padding: 10% 8% 10% 20%; */
+    display: flex;
+    flex-direction: column;
+    flex-grow: .8;
+    /* position: relative; */
+    /* align-items: center; */
+    justify-content: center;
+    padding: 8px;
     
 }
 
@@ -363,6 +405,7 @@ section{
     right: 10px;
     top: 10px;
     font-size: 20px;
+    font-style: italic;
 }
 
 
@@ -388,6 +431,7 @@ section{
     flex-basis: 600px;
     justify-content:flex-start;
     /* flex: 1 1 500px; */
+    flex-grow: .2;
 
 }
 
