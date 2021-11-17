@@ -260,3 +260,16 @@ h1.gift_boss{
     border-radius: 0 5px 5px 0;
     background-color: white;
 }
+
+
+.giftbgcat{
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    background-image: url("../images/background/CZUIR1Jh-2.png");
+    height: 700px;
+    width: 400px;
+    background-position: right;
+    opacity: .1;
+}
