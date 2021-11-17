@@ -95,7 +95,7 @@ h1.gift_boss{
     }
 }
 
-@media (max-width:767.98px){
+@media (max-width:1060px){
     .gift_grid{
         display: grid;
         grid-template-columns: auto auto;
