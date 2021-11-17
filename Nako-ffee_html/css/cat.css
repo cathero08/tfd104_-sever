@@ -21,6 +21,13 @@ h1.cat_boss{
     ;
 }
 
+@media (max-width: 900px){
+    h1.cat_boss{
+        margin: 70px auto 0px;
+    }
+}
+
+
 
 
 
@@ -46,6 +53,12 @@ h1.cat_boss{
 @media (max-width: 1200px){
     .cat_info_1{
         width: 95%;
+    }
+}
+
+@media (max-width: 900px){
+    .cat_info_1{
+        margin: 50px auto 50px;
     }
 }
 
@@ -80,6 +93,13 @@ h1.cat_boss{
     bottom: -55px;
 
 }
+
+@media (max-width: 767.98px){
+    .cat_info_2{
+        margin: 100px auto 200px;
+    }
+}
+
 
 .cat_info_left p.ca2{
     color: #ececec;
