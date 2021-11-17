@@ -129,12 +129,19 @@ div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text a.nekoff
     div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text p{
         padding-right: 20px ;
     }
+    div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text a.nekoffee_since_2020_button{
+        margin-left: 45%;
+    }
 }
 
 @media (max-width: 767.98px){
     div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text{
         margin: 50px auto 0;
         text-align: center;
+    }
+    div.cat_index main div.nekoffee_since_2020 div.nekoffee_since_2020_text p{
+        padding-right: 20px ;
+        padding-left: 20px;
     }
 
 }
@@ -153,6 +160,7 @@ div.cat_index main h2.if_wanttocatfamily{
     margin: 120px auto ;
     text-align: center;
     letter-spacing: 2px;
+    
 
 }
 
@@ -195,8 +203,12 @@ div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text a.ne
 
 div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text a.nekoffee_since_2020_2_button img{
     margin: 0 0 3px 14px;
+    
 
 }
+/* =============================================================================箭頭取代 */
+
+
 
 a.nekoffee_since_2020_2_button:hover{
     animation:cat_rotate_left;
@@ -254,6 +266,7 @@ div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_img::afte
     }
     div.cat_index main div.nekoffee_since_2020_2 div.nekoffee_since_2020_2_text p{
         margin: auto;
+        padding-left: 0px;
     }
 
 
@@ -605,7 +618,7 @@ div.cat_index main div.grid{
 div.cat_index main div.grid_cat_container{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: 140px 140px 140px;
+    grid-template-rows: 180px 180px 180px;
     gap:30px;
     /* border: 1px solid black; */
 
@@ -665,6 +678,7 @@ div.cat_index main div.grid_cat_container a.-item9{
 
 div.cat_index main div.grid_cat_container a p{
     margin: 0;
+    width: 100%;
     color: white;
     font-size: 18px;
     font-weight: bold;
