@@ -258,7 +258,8 @@ div aside.sidenav ul.social_icon li a img{
 
 
 .showthepage{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0px 3px 11px rgba(255, 165, 0, .7); */
+    border-bottom: 3px solid rgba(255, 192, 203, .7);
 }
 
 section{
